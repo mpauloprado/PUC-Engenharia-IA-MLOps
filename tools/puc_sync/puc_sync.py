@@ -26,6 +26,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -99,6 +100,7 @@ SUFIXO_TURMA = re.compile(r"_?\s*\[IEC_[^\]]*\].*?(?=\.[A-Za-z0-9]{2,5}$|$)")
 def nome_seguro(nome, limite=90):
     """Nome válido no Windows e no Linux, sem o sufixo longo da turma e com tamanho limitado
     (no Windows o prefixo G:\\Meu Drive\\... já consome boa parte dos 260 caracteres)."""
+    nome = unicodedata.normalize("NFC", nome)  # Google Drive/Windows usam NFC; NFD gera nomes "duplicados" no Git
     nome = SUFIXO_TURMA.sub("", nome).strip()
     nome = PROIBIDOS.sub("_", nome).strip(" .") or "sem_nome"
     if len(nome) > limite:

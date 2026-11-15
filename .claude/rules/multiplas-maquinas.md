@@ -36,3 +36,10 @@ no Windows.
   (veja o `.gitignore`).
 - Datasets grandes, embeddings e índices de RAG não vão para o Git.
 - Se `git pull` apontar conflito, parar e mostrar ao aluno antes de resolver.
+- **Windows (pasta no Google Drive):** depois de um `git pull`, o `git status` pode
+  listar arquivos como modificados (`M`) sem nenhuma mudança real. É o sistema de
+  arquivos virtual do Drive alterando metadados. Confirme com `git diff --quiet`
+  (código de saída 0 = nada mudou) e então rode `git add -u` para atualizar o índice.
+  Se `git diff` mostrar diferença real, não rode `git add -u`: investigue.
+- Nomes de arquivo devem estar em Unicode NFC (forma composta). O Google Drive
+  converte NFD para NFC, e o Git passa a ver um arquivo "apagado" e outro "novo".
