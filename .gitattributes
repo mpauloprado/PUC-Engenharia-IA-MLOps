@@ -9,3 +9,6 @@
 *.zip binary
 *.png binary
 *.jpg binary
+
+# Originais (fontes primarias): NUNCA converter quebras de linha. Bytes identicos ao recebido.
+**/00_original/** -text

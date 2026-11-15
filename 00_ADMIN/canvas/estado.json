@@ -533,8 +533,8 @@
    "updated_at": "2026-10-06T22:18:51Z"
   },
   "18536835": {
-   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
-   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/raw-customers-1000.csv",
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_2/raw-customers-1000.csv",
+   "ja_existia": true,
    "nome": "raw-customers-1000.csv",
    "sha256": "aa534484c412ab9c0cc941e3c8114bc708284e332e6f484a6c4bf496dbffc93b",
    "updated_at": "2026-10-08T22:26:11Z"
@@ -734,8 +734,8 @@
    "updated_at": "2026-10-21T00:03:38Z"
   },
   "18663908": {
-   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
-   "caminho": "disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/transacoes_bancarias.csv",
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 5 - Feature Engineering e Feature Stores/Material de apoio/Bases de dados/transacoes_bancarias.csv",
+   "ja_existia": true,
    "nome": "transacoes_bancarias.csv",
    "sha256": "851fae82a15c27360435b8a1665fd8517e361e6066bcd7f8bb1449627b2fa923",
    "updated_at": "2026-10-21T22:58:12Z"

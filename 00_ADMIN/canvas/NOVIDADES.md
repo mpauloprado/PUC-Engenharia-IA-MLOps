@@ -7,7 +7,7 @@ atividade, rodar `/inspect-document` e `/ingest-material` (regras do projeto) e 
 ### Sincronização de 15/11/2026 18:39
 
 - [ ] **ARQUIVO NOVO** — Pipeline de Dados: Integração, Qualidade e Automação: `disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/Exercício 1 - Arquiteturas e fundamentos de pipelines de dados.docx` sha256 e9c7dbdead76293b…
-- [ ] **ARQUIVO NOVO** — Pipeline de Dados: Integração, Qualidade e Automação: `disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/transacoes_bancarias.csv` sha256 851fae82a15c2736…
+- [ ] **ARQUIVO NOVO** — Pipeline de Dados: Integração, Qualidade e Automação: ~~`disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/transacoes_bancarias.csv`~~ (duplicata removida; já existia em `disciplinas/01_pipeline_dados/00_original/Aula 5 - Feature Engineering e Feature Stores/Material de apoio/Bases de dados/transacoes_bancarias.csv`) sha256 851fae82a15c2736…
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/02 - APRESENTAÇÃO/Página - Apresentação da Disciplina.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/02 - APRESENTAÇÃO/Página - Plano de Ensino.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/04 - UNIDADE 1 - FUNDAMENTOS DE COMPUTAÇÃO EM NUVE/Página - Unidade 1 - Orientações de Estudo.html` 
@@ -18,7 +18,7 @@ atividade, rodar `/inspect-document` e `/ingest-material` (regras do projeto) e 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - Material Complementar.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - aula 03 - Gravação da aula.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Lab prático (opcional)_ Construindo um Data Lake com S3, Glue e Athena.html` 
-- [ ] **ARQUIVO NOVO** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/raw-customers-1000.csv` sha256 aa534484c412ab9c…
+- [ ] **ARQUIVO NOVO** — Cloud Computing para IA e Ciência de Dados: ~~`disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/raw-customers-1000.csv`~~ (duplicata removida; já existia em `disciplinas/02_cloud_computing/00_original/Unidade_2/raw-customers-1000.csv`) sha256 aa534484c412ab9c…
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - aula 04 - Gravação da aula.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página - Unidade 3 - Orientações de Estudo.html` 
 - [ ] **PÁGINA NOVA** — Cloud Computing para IA e Ciência de Dados: `disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página - Unidade 3 - Material Complementar.html` 

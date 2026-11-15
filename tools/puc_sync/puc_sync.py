@@ -141,6 +141,16 @@ def texto_html(h, limite=600):
     return t if len(t) <= limite else t[:limite].rstrip() + "…"
 
 
+def gravar_se_mudou(arq, conteudo):
+    """Grava só se o conteúdo mudou, ignorando a linha 'Gerado automaticamente ... em <data>'."""
+    def sem_data(t):
+        return re.sub(r"^> Gerado automaticamente.*$", "", t, flags=re.M)
+    if arq.exists() and sem_data(arq.read_text(encoding="utf-8")) == sem_data(conteudo):
+        return False
+    arq.write_text(conteudo, encoding="utf-8")
+    return True
+
+
 # ---------------------------------------------------------------- sincronização
 class Sync:
     def __init__(self, dry):
@@ -310,13 +320,13 @@ class Sync:
         for e in sorted(eventos, key=lambda x: x.get("start_at") or ""):
             out.append(f"| {fmt_data(e.get('start_at'))} | {fmt_data(e.get('end_at'))} | {e.get('title')} | "
                        f"{e.get('location_name') or ''} {e.get('html_url') or ''} |")
-        (SAIDA / "PRAZOS.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+        gravar_se_mudou(SAIDA / "PRAZOS.md", "\n".join(out) + "\n")
         # AVISOS
         out = ["# Avisos do Canvas\n", cab]
         for a in sorted(self.estado["avisos"].values(), key=lambda x: x.get("data") or "", reverse=True):
             out += [f"## {a['titulo']}", f"*{a['curso']} — {fmt_data(a['data'])}* — [abrir no Canvas]({a['url']})\n",
                     a["texto"] + "\n"]
-        (SAIDA / "AVISOS.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+        gravar_se_mudou(SAIDA / "AVISOS.md", "\n".join(out) + "\n")
         # NOVIDADES (acumulativo, mais recentes no topo)
         arq = SAIDA / "NOVIDADES.md"
         antigo = arq.read_text(encoding="utf-8").split("<!-- entradas -->", 1)[1] if arq.exists() else "\n"
@@ -329,8 +339,9 @@ class Sync:
                 "Itens marcados `[ ]` ainda **não foram inspecionados**. Antes de usar um material novo em\n"
                 "atividade, rodar `/inspect-document` e `/ingest-material` (regras do projeto) e marcar `[x]`.\n\n"
                 "<!-- entradas -->")
-        arq.write_text(topo + novo + antigo, encoding="utf-8")
-        ESTADO_ARQ.write_text(json.dumps(self.estado, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+        if novo or not arq.exists():
+            arq.write_text(topo + novo + antigo, encoding="utf-8")
+        gravar_se_mudou(ESTADO_ARQ, json.dumps(self.estado, ensure_ascii=False, indent=1, sort_keys=True))
 
 
 def main():
