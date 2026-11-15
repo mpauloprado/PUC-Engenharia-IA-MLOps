@@ -1,0 +1,11 @@
+# Normaliza quebras de linha entre Windows e Kali
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Binarios (nunca converter)
+*.pdf binary
+*.docx binary
+*.zip binary
+*.png binary
+*.jpg binary

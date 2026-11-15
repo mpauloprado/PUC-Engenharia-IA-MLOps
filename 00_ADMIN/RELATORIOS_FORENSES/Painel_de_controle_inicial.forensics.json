@@ -1,0 +1,37 @@
+{
+  "file": "/mnt/data/PUC-Engenharia-IA-MLOps/00_ADMIN/avisos_canvas/Painel_de_controle_inicial.pdf",
+  "name": "Painel_de_controle_inicial.pdf",
+  "size_bytes": 208061,
+  "sha256": "b1e5c83feee4942b4c2b5307c640f9380f840977c31724fc5fe51c3f82e14048",
+  "scanned_at_utc": "2026-09-16T00:29:35.396575+00:00",
+  "limitations": [
+    "This is defensive heuristic triage, not proof that sophisticated steganography is absent.",
+    "Visual watermark detection still requires rendering/visual inspection."
+  ],
+  "pdf_structural_indicators": {
+    "javascript": 0,
+    "embedded_file": 0,
+    "launch_action": 0,
+    "open_action": 0,
+    "optional_content_layers": 0,
+    "actual_text": 0
+  },
+  "pdf_pages": 4,
+  "metadata": {
+    "format": "PDF 1.4",
+    "title": "Painel de controle",
+    "author": "",
+    "subject": "",
+    "keywords": "",
+    "creator": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+    "producer": "Skia/PDF m153",
+    "creationDate": "D:20260915232401+00'00'",
+    "modDate": "D:20260915232401+00'00'",
+    "trapped": "",
+    "encryption": null
+  },
+  "pdf_link_annotations": 39,
+  "pdf_text_anomalies": [],
+  "text_security_findings": [],
+  "severity": "informational"
+}

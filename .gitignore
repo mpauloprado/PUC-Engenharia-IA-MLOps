@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.bak
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Segredos adicionais
+!.env.example
+credentials*.json
+service-account*.json
+secrets/
+
+# Dados/artefatos pesados de ML e RAG (versionar via DVC ou manter no Drive)
+data/raw/
+data/processed/
+*.parquet
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.safetensors
+chroma*/
+faiss*/
+vectorstore/
+mlruns/
+mlartifacts/
+wandb/
+
+# Google Drive / Windows
+desktop.ini
+*.gdoc
+*.gsheet
+*.gslides
+.tmp.drivedownload/
+.tmp.driveupload/
+~$*
+
+# Claude Code: configuracao pessoal por maquina (a do projeto em .claude/ e versionada)
+.claude/settings.local.json
+
+# Anotacoes com credenciais de laboratorio (manter so no Drive)
+*Dados da minha VM*
