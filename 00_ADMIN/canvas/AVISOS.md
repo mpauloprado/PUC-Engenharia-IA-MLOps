@@ -1,6 +1,6 @@
 # Avisos do Canvas
 
-> Gerado automaticamente por `tools/puc_sync` em 15/11/2026 18:39 (horário de Brasília). Fonte: Canvas `[CANVAS]`. Não edite à mão.
+> Gerado automaticamente por `tools/puc_sync` em 15/11/2026 19:33 (horário de Brasília). Fonte: Canvas `[CANVAS]`. Não edite à mão.
 
 
 ## REPOSIÇÃO DA DISCIPLINA - Pipeline de Dados: Integração, Qualidade e Automação
