@@ -1,0 +1,17 @@
+{
+  "_comentario": "Mapeamento Canvas -> pasta do projeto. course_id vem da URL do Canvas (/courses/<id>). Cursos fora desta lista sao ignorados.",
+  "canvas_base_url_arquivo": "~/.config/puc-sync/canvas_base",
+  "canvas_token_arquivo": "~/.config/puc-sync/canvas_token",
+  "canvas_token_expira_arquivo": "~/.config/puc-sync/canvas_token_expira",
+  "tamanho_maximo_mb": 50,
+  "cursos": {
+    "279166": {"nome": "Pipeline de Dados: Integração, Qualidade e Automação", "pasta": "disciplinas/01_pipeline_dados"},
+    "279167": {"nome": "Cloud Computing para IA e Ciência de Dados", "pasta": "disciplinas/02_cloud_computing"},
+    "279168": {"nome": "Conteinerização e Orquestração com Kubernetes", "pasta": "disciplinas/03_kubernetes"},
+    "279171": {"nome": "Orquestração de Workflows", "pasta": "disciplinas/06_orquestracao_workflows"},
+    "279179": {"nome": "Espaço Coordenação", "pasta": "00_ADMIN/coordenacao_canvas"}
+  },
+  "cursos_ignorados": {
+    "256296": "Inteligência Artificial Aplicada - Oferta 1 (curso anterior; não misturar, ver CLAUDE.md seção 8)"
+  }
+}

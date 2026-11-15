@@ -28,3 +28,17 @@ python tools/document_forensics.py "caminho/arquivo.pdf" --json-out "relatorio.j
 Não existe teste universal que prove ausência de esteganografia.
 A ferramenta é uma triagem e deve ser combinada com inspeção visual e,
 quando houver suspeita real, ferramentas forenses especializadas.
+
+## puc_sync/ — sincronização com o Canvas
+
+Baixa materiais, atividades, prazos e avisos do Canvas (somente leitura). Detalhes e
+regras de uso: `.claude/rules/canvas-sync.md`.
+
+```bash
+python3 tools/puc_sync/puc_sync.py --listar-cursos   # cursos e mapeamento
+python3 tools/puc_sync/puc_sync.py --dry-run         # simula
+python3 tools/puc_sync/puc_sync.py                   # sincroniza
+```
+
+Automação (Kali): `~/.local/bin/puc-sync` + `puc-sync.timer` (scripts versionados em `ambiente-claude`).
+O token fica em `~/.config/puc-sync/` (fora do repositório).

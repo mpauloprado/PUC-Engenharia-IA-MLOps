@@ -1,0 +1,593 @@
+<!-- Origem: https://pucminas.instructure.com/courses/279167/pages/lab-pratico-opcional-api-de-scoring-de-credito-com-lambda-api-gateway-dynamodb-e-bedrock | atualizada no Canvas em 2026-10-22T01:52:38Z | capturada por puc-sync em 2026-11-15T18:39:58.812669-03:00 -->
+<meta charset="utf-8"><h1>Lab prático (opcional): API de Scoring de Crédito com Lambda, API Gateway, DynamoDB e Bedrock</h1>
+<h2>Lab prático (opcional): API de Scoring de Crédito com Lambda, API Gateway, DynamoDB e Bedrock</h2>
+<p>Pessoal,</p>
+<p>Durante a aula, construímos na prática uma API serverless de análise de crédito utilizando serviços da AWS.</p>
+<p>Neste laboratório, vocês poderão reproduzir a prática no ambiente AWS Academy Data Engineering Sandbox.</p>
+<p>A ideia é criar uma função AWS Lambda que calcula uma pontuação de crédito, expor essa função como uma API HTTP com o Amazon API Gateway, chamar a API pelo Postman, gravar cada decisão no Amazon DynamoDB e, por fim, usar um modelo do Amazon Bedrock para explicar a decisão em linguagem simples.</p>
+<h3>Fluxo da prática</h3>
+<pre>Postman → API Gateway (HTTP API, POST /scoring-credito) → Lambda (scoring-credito) → DynamoDB (decisoes-credito)
+                                                                                    → Bedrock (Amazon Nova Micro)</pre>
+<p>A função passa por três versões ao longo do lab:</p>
+<ul>
+<li><strong>Versão 1:</strong> calcula a pontuação e devolve APROVADO ou REPROVADO;</li>
+<li><strong>Versão 2:</strong> grava cada decisão no DynamoDB;</li>
+<li><strong>Versão 3:</strong> pede ao Bedrock uma explicação da decisão e grava a explicação junto.</li>
+</ul>
+<p>A regra de pontuação usa três critérios, somando no máximo 100 pontos. A aprovação exige no mínimo 55 pontos.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1" cellpadding="6">
+<thead>
+<tr><th>Critério</th><th>Faixas</th></tr>
+</thead>
+<tbody>
+<tr><td>Renda mensal (R$ mil)</td><td>≥ 8: 35 pts | ≥ 5: 25 pts | ≥ 3: 15 pts | abaixo de 3: 5 pts</td></tr>
+<tr><td>Score de crédito</td><td>≥ 800: 40 pts | ≥ 650: 28 pts | ≥ 500: 15 pts | abaixo de 500: 0 pts</td></tr>
+<tr><td>Comprometimento (dívida / renda)</td><td>abaixo de 0,3: 25 pts | abaixo de 0,6: 15 pts | abaixo de 1,0: 5 pts | 1,0 ou mais: 0 pts</td></tr>
+</tbody>
+</table>
+
+<h3>1. Acessar o AWS Academy Sandbox</h3>
+<p>Acesse o curso:</p>
+<p>AWS Academy Data Engineering</p>
+<p><a href="https://awsacademy.instructure.com/courses/190890" target="_blank">https://awsacademy.instructure.com/courses/190890</a></p>
+<p>Dentro do curso, acesse:</p>
+<p>Sandbox environment</p>
+<p><a href="https://awsacademy.instructure.com/courses/190890/modules/items/18883313" target="_blank">https://awsacademy.instructure.com/courses/190890/modules/items/18883313</a></p>
+<p>Clique em <strong>Start Lab</strong> e, quando o ambiente estiver disponível, abra o AWS Management Console.</p>
+<p>Utilize o ambiente disponibilizado pelo AWS Academy para realizar toda a prática. Não é necessário utilizar uma conta AWS pessoal.</p>
+<p>Faça todo o laboratório na mesma região. Lambda, API Gateway, DynamoDB e Bedrock precisam estar na mesma região.</p>
+<p>Para as chamadas à API, utilize o <strong>Postman</strong>, na versão desktop ou na versão web.</p>
+
+<h3>2. Criar a função Lambda</h3>
+<ol>
+<li>Acesse o <strong>AWS Lambda</strong> no console.</li>
+<li>Clique em <strong>Criar função</strong>.</li>
+<li>Escolha: <strong>Criar do zero</strong>.</li>
+<li>Nome da função: <code>scoring-credito</code></li>
+<li>Runtime: <strong>Python 3.12</strong></li>
+<li>Arquitetura: <strong>x86_64</strong></li>
+<li>Permissões: <strong>Alterar a função de execução padrão</strong> → <strong>Usar uma função existente</strong> → <code>LabRole</code></li>
+<li>Clique em <strong>Criar função</strong>.</li>
+</ol>
+
+<h3>3. Colar o código da versão 1</h3>
+<ol>
+<li>Na aba <strong>Código</strong>, abra o arquivo <code>lambda_function.py</code>.</li>
+<li>Apague todo o conteúdo.</li>
+<li>Cole o código abaixo.</li>
+<li>Clique em <strong>Deploy</strong>.</li>
+<li>Aguarde a mensagem de que a função foi atualizada com sucesso.</li>
+</ol>
+<pre>import base64
+import json
+
+LIMITE_APROVACAO = 55
+
+
+def calcular_score(renda, score, divida):
+    pontos = 0
+
+    # Renda (em milhares de reais)
+    if renda &gt;= 8:     pontos += 35
+    elif renda &gt;= 5:   pontos += 25
+    elif renda &gt;= 3:   pontos += 15
+    else:              pontos += 5
+
+    # Score de crédito
+    if score &gt;= 800:   pontos += 40
+    elif score &gt;= 650: pontos += 28
+    elif score &gt;= 500: pontos += 15
+
+    # Comprometimento de renda (dívida / renda)
+    comprometimento = divida / renda if renda &gt; 0 else 99
+
+    if comprometimento &lt; 0.3:   pontos += 25
+    elif comprometimento &lt; 0.6: pontos += 15
+    elif comprometimento &lt; 1.0: pontos += 5
+
+    return pontos  # máximo: 100
+
+
+def resposta(status, corpo):
+    return {
+        "statusCode": status,
+        "headers": {"Content-Type": "application/json"},
+        "body": json.dumps(corpo, ensure_ascii=False),
+    }
+
+
+def lambda_handler(event, context):
+    try:
+        body = event.get("body", event)
+        if event.get("isBase64Encoded"):
+            body = base64.b64decode(body).decode("utf-8")
+        if isinstance(body, str):
+            body = json.loads(body)
+
+        renda  = float(body["renda_mensal"])
+        score  = float(body["score_credito"])
+        divida = float(body["divida_atual"])
+
+        pontos   = calcular_score(renda, score, divida)
+        aprovado = pontos &gt;= LIMITE_APROVACAO
+
+        return resposta(200, {
+            "aprovado": aprovado,
+            "decisao": "APROVADO" if aprovado else "REPROVADO",
+            "pontuacao": pontos,
+            "limite_min": LIMITE_APROVACAO,
+            "dados": {"renda_mensal": renda, "score_credito": score,
+                      "divida_atual": divida},
+        })
+
+    except KeyError as e:
+        return resposta(400, {"erro": f"Campo ausente: {e}"})
+    except (ValueError, TypeError):
+        return resposta(400, {"erro": "Payload inválido: envie JSON com valores numéricos"})
+    except Exception as e:
+        return resposta(500, {"erro": str(e)})</pre>
+
+<h3>4. Testar a Lambda no console</h3>
+<ol>
+<li>Aba <strong>Testar</strong> → <strong>Criar novo evento</strong>.</li>
+<li>Nome do evento: <code>teste-aprovado</code></li>
+<li>JSON do evento:</li>
+</ol>
+<pre>{
+  "renda_mensal": 7.0,
+  "score_credito": 720,
+  "divida_atual": 2.0
+}</pre>
+<ol start="4">
+<li>Salve e clique em <strong>Testar</strong>.</li>
+<li>Verifique o resultado:
+<ul>
+<li><code>statusCode</code>: 200</li>
+<li><code>body</code> com <code>"pontuacao": 78</code> e <code>"decisao": "APROVADO"</code></li>
+</ul>
+</li>
+</ol>
+<p>Cálculo: renda 7 = 25 pts, score 720 = 28 pts, dívida/renda 0,29 = 25 pts.</p>
+
+<h3>5. Criar a API no API Gateway</h3>
+<ol>
+<li>Acesse o <strong>Amazon API Gateway</strong> no console.</li>
+<li>Clique em <strong>Criar API</strong>.</li>
+<li>No cartão <strong>HTTP API</strong>, clique em <strong>Compilar</strong>.</li>
+</ol>
+<p><strong>Etapa 1 do assistente: Integrações</strong></p>
+<ol start="4">
+<li>Clique em <strong>Adicionar integração</strong>.</li>
+<li>Integração: <strong>Lambda</strong></li>
+<li>Região: a mesma da função.</li>
+<li>Função do Lambda: <code>scoring-credito</code></li>
+<li>Versão: <strong>2.0</strong> (padrão)</li>
+<li>Nome da API: <code>api-scoring-credito</code></li>
+<li>Clique em <strong>Avançar</strong>.</li>
+</ol>
+<p><strong>Etapa 2 do assistente: Rotas</strong></p>
+<ol start="11">
+<li>Método: troque <strong>ANY</strong> por <strong>POST</strong>.</li>
+<li>Caminho do recurso: <code>/scoring-credito</code></li>
+<li>Destino da integração: <code>scoring-credito</code></li>
+<li>Clique em <strong>Avançar</strong>.</li>
+</ol>
+<p><strong>Etapa 3 do assistente: Estágios</strong></p>
+<ol start="15">
+<li>Nome do estágio: <code>$default</code></li>
+<li>Implantação automática: <strong>ativada</strong></li>
+<li>Clique em <strong>Avançar</strong>.</li>
+</ol>
+<p><strong>Etapa 4 do assistente: Revisar e criar</strong></p>
+<ol start="18">
+<li>Clique em <strong>Criar</strong>.</li>
+<li>Copie a URL de invocação, no formato:</li>
+</ol>
+<pre>https://ID-DA-API.execute-api.REGIAO.amazonaws.com</pre>
+
+<h3>6. Chamar a API pelo Postman</h3>
+<ol>
+<li>Abra o Postman → <strong>New</strong> → <strong>HTTP Request</strong>.</li>
+<li>Método: <strong>POST</strong></li>
+<li>URL:</li>
+</ol>
+<pre>https://ID-DA-API.execute-api.REGIAO.amazonaws.com/scoring-credito</pre>
+<ol start="4">
+<li>Aba <strong>Body</strong> → <strong>raw</strong> → <strong>JSON</strong>.</li>
+<li>Cole o Body 1:</li>
+</ol>
+<pre>{
+  "renda_mensal": 6.0,
+  "score_credito": 680,
+  "divida_atual": 3.5
+}</pre>
+<ol start="6">
+<li>Clique em <strong>Send</strong>.</li>
+<li>Verifique a resposta:
+<ul>
+<li>Status: <strong>200 OK</strong></li>
+<li><code>"pontuacao": 68</code></li>
+<li><code>"decisao": "APROVADO"</code></li>
+</ul>
+</li>
+<li>Troque o Body pelo Body 2:</li>
+</ol>
+<pre>{
+  "renda_mensal": 2.0,
+  "score_credito": 420,
+  "divida_atual": 8.0
+}</pre>
+<ol start="9">
+<li>Clique em <strong>Send</strong>.</li>
+<li>Verifique a resposta:
+<ul>
+<li>Status: <strong>200 OK</strong></li>
+<li><code>"pontuacao": 5</code></li>
+<li><code>"decisao": "REPROVADO"</code></li>
+</ul>
+</li>
+</ol>
+<p>Observe que a reprovação volta com status 200. A API funcionou; a reprovação é a resposta de negócio, dentro do corpo.</p>
+
+<h3>7. Criar a tabela no DynamoDB</h3>
+<ol>
+<li>Acesse o <strong>Amazon DynamoDB</strong> no console.</li>
+<li>Clique em <strong>Criar tabela</strong>.</li>
+<li>Nome da tabela: <code>decisoes-credito</code></li>
+<li>Chave de partição: <code>id_decisao</code> (String)</li>
+<li>Chave de classificação: deixe em branco.</li>
+<li>Configurações da tabela: <strong>Configurações padrão</strong></li>
+<li>Clique em <strong>Criar tabela</strong>.</li>
+<li>Aguarde o status: <strong>Ativo</strong>.</li>
+</ol>
+
+<h3>8. Atualizar o código da Lambda (versão 2: gravação no DynamoDB)</h3>
+<ol>
+<li>Lambda → <code>scoring-credito</code> → aba <strong>Código</strong>.</li>
+<li>Apague todo o conteúdo do <code>lambda_function.py</code>.</li>
+<li>Cole o código abaixo.</li>
+<li>Clique em <strong>Deploy</strong>.</li>
+</ol>
+<pre>import base64
+import json
+import os
+import uuid
+from datetime import datetime, timezone
+from decimal import Decimal
+
+import boto3
+
+LIMITE_APROVACAO = 55
+TABELA = os.environ.get("TABELA", "decisoes-credito")
+
+# Cliente criado fora do handler: reaproveitado no warm start
+tabela = boto3.resource("dynamodb").Table(TABELA)
+
+
+def calcular_score(renda, score, divida):
+    pontos = 0
+
+    # Renda (em milhares de reais)
+    if renda &gt;= 8:     pontos += 35
+    elif renda &gt;= 5:   pontos += 25
+    elif renda &gt;= 3:   pontos += 15
+    else:              pontos += 5
+
+    # Score de crédito
+    if score &gt;= 800:   pontos += 40
+    elif score &gt;= 650: pontos += 28
+    elif score &gt;= 500: pontos += 15
+
+    # Comprometimento de renda (dívida / renda)
+    comprometimento = divida / renda if renda &gt; 0 else 99
+
+    if comprometimento &lt; 0.3:   pontos += 25
+    elif comprometimento &lt; 0.6: pontos += 15
+    elif comprometimento &lt; 1.0: pontos += 5
+
+    return pontos  # máximo: 100
+
+
+def resposta(status, corpo):
+    return {
+        "statusCode": status,
+        "headers": {"Content-Type": "application/json"},
+        "body": json.dumps(corpo, ensure_ascii=False),
+    }
+
+
+def lambda_handler(event, context):
+    try:
+        body = event.get("body", event)
+        if event.get("isBase64Encoded"):
+            body = base64.b64decode(body).decode("utf-8")
+        if isinstance(body, str):
+            body = json.loads(body)
+
+        renda  = float(body["renda_mensal"])
+        score  = float(body["score_credito"])
+        divida = float(body["divida_atual"])
+
+        pontos   = calcular_score(renda, score, divida)
+        aprovado = pontos &gt;= LIMITE_APROVACAO
+        decisao  = "APROVADO" if aprovado else "REPROVADO"
+
+        # Grava a decisão no DynamoDB (DynamoDB não aceita float: usa Decimal)
+        id_decisao = str(uuid.uuid4())
+        tabela.put_item(Item={
+            "id_decisao": id_decisao,
+            "data_hora": datetime.now(timezone.utc).isoformat(),
+            "renda_mensal": Decimal(str(renda)),
+            "score_credito": Decimal(str(score)),
+            "divida_atual": Decimal(str(divida)),
+            "pontuacao": pontos,
+            "decisao": decisao,
+        })
+
+        return resposta(200, {
+            "id_decisao": id_decisao,
+            "aprovado": aprovado,
+            "decisao": decisao,
+            "pontuacao": pontos,
+            "limite_min": LIMITE_APROVACAO,
+            "dados": {"renda_mensal": renda, "score_credito": score,
+                      "divida_atual": divida},
+        })
+
+    except KeyError as e:
+        return resposta(400, {"erro": f"Campo ausente: {e}"})
+    except (ValueError, TypeError):
+        return resposta(400, {"erro": "Payload inválido: envie JSON com valores numéricos"})
+    except Exception as e:
+        return resposta(500, {"erro": str(e)})</pre>
+
+<h3>9. Chamar de novo e ver a gravação no DynamoDB</h3>
+<ol>
+<li>No Postman, envie o Body 1 e o Body 2 de novo.</li>
+<li>Verifique a resposta: agora vem o campo <code>"id_decisao"</code>.</li>
+<li>DynamoDB → <strong>Tabelas</strong> → <code>decisoes-credito</code> → <strong>Explorar itens</strong>.</li>
+<li>Devem aparecer 2 itens, um por chamada, com os campos:
+<ul>
+<li><code>id_decisao</code></li>
+<li><code>data_hora</code></li>
+<li><code>renda_mensal</code>, <code>score_credito</code>, <code>divida_atual</code></li>
+<li><code>pontuacao</code></li>
+<li><code>decisao</code></li>
+</ul>
+</li>
+</ol>
+
+<h3>10. Testar o modelo no Amazon Bedrock</h3>
+<ol>
+<li>Acesse o <strong>Amazon Bedrock</strong> no console, na mesma região da Lambda.</li>
+<li>Menu lateral → <strong>Playgrounds</strong> → <strong>Chat</strong>.</li>
+<li>Selecionar modelo → <strong>Amazon</strong> → <strong>Nova Micro</strong>.<br>Se aparecer pedido de acesso ao modelo, solicite e aguarde a liberação.</li>
+<li>Escreva no chat:</li>
+</ol>
+<pre>Explique em 2 frases por que um cliente com renda de R$ 2 mil
+e dívida de R$ 8 mil teria o crédito reprovado.</pre>
+<ol start="5">
+<li>Clique em <strong>Executar</strong>.</li>
+<li>Verifique se o modelo responde em português.</li>
+</ol>
+
+<h3>11. Liberar o Bedrock na role da Lambda</h3>
+<ol>
+<li>Lambda → <code>scoring-credito</code> → <strong>Configuração</strong> → <strong>Permissões</strong>.</li>
+<li>Clique no nome da role (abre no IAM).</li>
+<li><strong>Adicionar permissões</strong> → <strong>Criar política em linha</strong> → <strong>JSON</strong>.</li>
+<li>Cole a política abaixo:</li>
+</ol>
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Action": "bedrock:InvokeModel",
+    "Resource": [
+      "arn:aws:bedrock:*::foundation-model/amazon.nova-micro-v1:0",
+      "arn:aws:bedrock:*:*:inference-profile/us.amazon.nova-micro-v1:0"
+    ]
+  }]
+}</pre>
+<ol start="5">
+<li>Nome da política: <code>bedrock-invoke-nova-micro</code></li>
+<li>Clique em <strong>Criar política</strong>.</li>
+<li>Volte na Lambda → <strong>Configuração</strong> → <strong>Configuração geral</strong> → <strong>Editar</strong>.</li>
+<li>Tempo limite: <strong>0 min 25 s</strong></li>
+<li>Clique em <strong>Salvar</strong>.</li>
+</ol>
+
+<h3>12. Atualizar o código da Lambda (versão 3: explicação com o Bedrock)</h3>
+<ol>
+<li>Lambda → <code>scoring-credito</code> → aba <strong>Código</strong>.</li>
+<li>Apague todo o conteúdo do <code>lambda_function.py</code>.</li>
+<li>Cole o código abaixo.</li>
+<li>Clique em <strong>Deploy</strong>.</li>
+</ol>
+<pre>import base64
+import json
+import os
+import uuid
+from datetime import datetime, timezone
+from decimal import Decimal
+
+import boto3
+
+LIMITE_APROVACAO = 55
+TABELA = os.environ.get("TABELA", "decisoes-credito")
+MODEL_ID = os.environ.get("MODEL_ID", "amazon.nova-micro-v1:0")
+
+# Clientes criados fora do handler: reaproveitados no warm start
+tabela = boto3.resource("dynamodb").Table(TABELA)
+bedrock = boto3.client("bedrock-runtime")
+
+
+def calcular_score(renda, score, divida):
+    pontos = 0
+
+    # Renda (em milhares de reais)
+    if renda &gt;= 8:     pontos += 35
+    elif renda &gt;= 5:   pontos += 25
+    elif renda &gt;= 3:   pontos += 15
+    else:              pontos += 5
+
+    # Score de crédito
+    if score &gt;= 800:   pontos += 40
+    elif score &gt;= 650: pontos += 28
+    elif score &gt;= 500: pontos += 15
+
+    # Comprometimento de renda (dívida / renda)
+    comprometimento = divida / renda if renda &gt; 0 else 99
+
+    if comprometimento &lt; 0.3:   pontos += 25
+    elif comprometimento &lt; 0.6: pontos += 15
+    elif comprometimento &lt; 1.0: pontos += 5
+
+    return pontos  # máximo: 100
+
+
+def gerar_explicacao(renda, score, divida, pontos, decisao):
+    # A LLM não decide nada: só explica, em linguagem simples, a decisão já tomada
+    comprometimento = divida / renda if renda &gt; 0 else 0
+    prompt = (
+        "Você é um analista de crédito. Explique ao cliente, em no máximo 3 frases, "
+        "em português e sem jargão, o motivo da decisão abaixo. "
+        "Use apenas os dados informados e não invente critérios.\n\n"
+        f"Renda mensal: R$ {renda:.1f} mil\n"
+        f"Score de crédito: {score:.0f}\n"
+        f"Dívida atual: R$ {divida:.1f} mil\n"
+        f"Comprometimento da renda (dívida/renda): {comprometimento:.2f}\n"
+        f"Pontuação: {pontos} de 100 (mínimo para aprovar: {LIMITE_APROVACAO})\n"
+        f"Decisão: {decisao}"
+    )
+    r = bedrock.converse(
+        modelId=MODEL_ID,
+        messages=[{"role": "user", "content": [{"text": prompt}]}],
+        inferenceConfig={"maxTokens": 200, "temperature": 0.2},
+    )
+    return r["output"]["message"]["content"][0]["text"]
+
+
+def resposta(status, corpo):
+    return {
+        "statusCode": status,
+        "headers": {"Content-Type": "application/json"},
+        "body": json.dumps(corpo, ensure_ascii=False),
+    }
+
+
+def lambda_handler(event, context):
+    try:
+        body = event.get("body", event)
+        if event.get("isBase64Encoded"):
+            body = base64.b64decode(body).decode("utf-8")
+        if isinstance(body, str):
+            body = json.loads(body)
+
+        renda  = float(body["renda_mensal"])
+        score  = float(body["score_credito"])
+        divida = float(body["divida_atual"])
+
+        pontos   = calcular_score(renda, score, divida)
+        aprovado = pontos &gt;= LIMITE_APROVACAO
+        decisao  = "APROVADO" if aprovado else "REPROVADO"
+
+        # Se o Bedrock falhar, a decisão continua saindo
+        try:
+            explicacao = gerar_explicacao(renda, score, divida, pontos, decisao)
+        except Exception as e:
+            explicacao = f"Explicação indisponível: {e}"
+
+        # Grava a decisão e a explicação no DynamoDB (DynamoDB não aceita float: usa Decimal)
+        id_decisao = str(uuid.uuid4())
+        tabela.put_item(Item={
+            "id_decisao": id_decisao,
+            "data_hora": datetime.now(timezone.utc).isoformat(),
+            "renda_mensal": Decimal(str(renda)),
+            "score_credito": Decimal(str(score)),
+            "divida_atual": Decimal(str(divida)),
+            "pontuacao": pontos,
+            "decisao": decisao,
+            "explicacao": explicacao,
+            "modelo": MODEL_ID,
+        })
+
+        return resposta(200, {
+            "id_decisao": id_decisao,
+            "aprovado": aprovado,
+            "decisao": decisao,
+            "pontuacao": pontos,
+            "limite_min": LIMITE_APROVACAO,
+            "explicacao": explicacao,
+            "dados": {"renda_mensal": renda, "score_credito": score,
+                      "divida_atual": divida},
+        })
+
+    except KeyError as e:
+        return resposta(400, {"erro": f"Campo ausente: {e}"})
+    except (ValueError, TypeError):
+        return resposta(400, {"erro": "Payload inválido: envie JSON com valores numéricos"})
+    except Exception as e:
+        return resposta(500, {"erro": str(e)})</pre>
+
+<h3>13. Chamar de novo e ver a explicação</h3>
+<ol>
+<li>No Postman, envie o Body 1 e o Body 2 de novo.</li>
+<li>Verifique a resposta: agora vem o campo <code>"explicacao"</code>.
+<ul>
+<li>Body 1: explicação de por que foi APROVADO;</li>
+<li>Body 2: explicação de por que foi REPROVADO.</li>
+</ul>
+</li>
+<li>DynamoDB → <strong>Tabelas</strong> → <code>decisoes-credito</code> → <strong>Explorar itens</strong>.</li>
+<li>Os novos itens têm também os campos <code>explicacao</code> e <code>modelo</code>.</li>
+</ol>
+<p><strong>Se a explicação vier como "Explicação indisponível: ... AccessDenied":</strong> a permissão da etapa 11 ainda não propagou ou foi colocada em outra role. Aguarde um pouco e envie de novo.</p>
+<p><strong>Se vier erro de acesso ao modelo com o ID amazon.nova-micro-v1:0:</strong> Lambda → <strong>Configuração</strong> → <strong>Variáveis de ambiente</strong> → <strong>Editar</strong> → adicione <code>MODEL_ID</code> = <code>us.amazon.nova-micro-v1:0</code> → <strong>Salvar</strong>.</p>
+<p>Leia com atenção a explicação gerada para o Body 1. Confira se o modelo usou apenas os dados enviados ou se descreveu a renda de forma diferente da regra de pontuação (a renda de R$ 6 mil fica na faixa intermediária).</p>
+
+<h3>14. Limpeza</h3>
+<ol>
+<li>API Gateway → <code>api-scoring-credito</code> → <strong>Excluir</strong>.</li>
+<li>Lambda → <code>scoring-credito</code> → <strong>Ações</strong> → <strong>Excluir</strong>.</li>
+<li>CloudWatch → <strong>Grupos de logs</strong> → <code>/aws/lambda/scoring-credito</code> → <strong>Excluir</strong>.</li>
+<li>DynamoDB → <strong>Tabelas</strong> → <code>decisoes-credito</code> → <strong>Excluir</strong>.</li>
+<li>IAM → role da Lambda → remova a política <code>bedrock-invoke-nova-micro</code>.</li>
+</ol>
+
+<h3>O que você deve aprender com a prática</h3>
+<p>Ao finalizar o laboratório, você deverá conseguir explicar:</p>
+<ul>
+<li>Qual é a função do AWS Lambda e o que é o evento que ele recebe;</li>
+<li>Por que a resposta no teste do console vem com <code>statusCode</code> e <code>body</code>, e no Postman vem só o JSON;</li>
+<li>Qual é a função do API Gateway na frente da Lambda;</li>
+<li>Por que a rota aceita apenas POST, e o que acontece com uma chamada GET;</li>
+<li>O que são o estágio <code>$default</code> e a implantação automática;</li>
+<li>Por que uma reprovação volta com status 200, e quando a API devolve 400 ou 500;</li>
+<li>Por que o código usa <code>Decimal</code> para gravar números no DynamoDB;</li>
+<li>Por que os clientes do DynamoDB e do Bedrock são criados fora do handler;</li>
+<li>Por que a permissão do Bedrock precisa estar na role de execução da Lambda;</li>
+<li>Por que, no código, a decisão vem da regra e o modelo apenas explica;</li>
+<li>Por que a chamada ao Bedrock fica dentro de um <code>try</code> separado;</li>
+<li>Como diferentes serviços AWS podem ser combinados para construir uma API serverless com IA generativa.</li>
+</ul>
+
+<h3>Estrutura final do laboratório</h3>
+<p>Ao final da prática, antes da limpeza, o ambiente deverá possuir:</p>
+<pre>Lambda:       scoring-credito (Python 3.12, LabRole, tempo limite 25 s)
+API Gateway:  api-scoring-credito (HTTP API)
+              └── POST /scoring-credito → scoring-credito
+              └── estágio $default, implantação automática
+DynamoDB:     decisoes-credito (chave de partição: id_decisao)
+              └── um item por chamada, com decisão, explicação e modelo
+IAM:          LabRole + política em linha bedrock-invoke-nova-micro
+Bedrock:      Amazon Nova Micro, chamado pela Converse API</pre>
+<p>Fluxo completo:</p>
+<pre>Postman → API Gateway → Lambda → regra de pontuação → Bedrock (explicação) → DynamoDB → resposta JSON</pre>
+
+<h3>Importante</h3>
+<p>Esta atividade é opcional e não vale nota.</p>
+<p>O objetivo é permitir que vocês reproduzam, individualmente, a prática realizada durante a aula e tenham contato direto com os serviços serverless e de IA generativa da AWS.</p>
+<p>Cada chamada ao Bedrock é cobrada por token processado e consome créditos do ambiente. Não deixe a API exposta depois do laboratório: execute a etapa de limpeza.</p>
+<p>Ao finalizar a atividade, encerrem o ambiente do AWS Academy Sandbox conforme as orientações disponibilizadas no laboratório.</p>
+<p>Bom laboratório!</p>

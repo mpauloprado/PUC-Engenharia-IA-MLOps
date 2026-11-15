@@ -1,0 +1,45 @@
+# Avisos do Canvas
+
+> Gerado automaticamente por `tools/puc_sync` em 15/11/2026 18:39 (horário de Brasília). Fonte: Canvas `[CANVAS]`. Não edite à mão.
+
+
+## REPOSIÇÃO DA DISCIPLINA - Pipeline de Dados: Integração, Qualidade e Automação
+*Espaço Coordenação — 24/09/2026 18:09* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/901988)
+
+Prezados(as) alunos(as), boa noite. Espero que estejam bem. Conforme comunicado anteriormente, a aula da disciplina Pipeline de Dados: Integração, Qualidade e Automação , prevista para o dia 22/09/2026 , foi cancelada. Informo que a reposição já foi programada e será realizada, excepcionalmente, no dia 26/10/2026 (segunda-feira) . Peço, por gentileza, que se organizem para participar da aula na nova data. Aproveito para informar que a grade horária já foi atualizada e encontra-se disponível no Espaço da Coordenação para consulta. Em caso de dúvidas, permaneço à disposição. Abraços. Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC
+
+## CANCELAMENTO DA AULA DE HOJE - 22/09/2026
+*Espaço Coordenação — 22/09/2026 18:29* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/901489)
+
+Prezados(as) alunos(as), boa noite. Espero que estejam bem. Conforme comunicado pelo professor Victor Sales Silva , por motivos de saúde, a aula de hoje da disciplina Pipeline de Dados: Integração, Qualidade e Automação , prevista para ocorrer das 19h às 22h30 , precisou ser cancelada. Informo que a reposição da aula será alinhada pelo professor juntamente à coordenação do curso. Assim que houver a definição da nova data, a informação será divulgada. Além disso, em breve, publicarei no Espaço da Coordenação a grade horária atualizada para acompanhamento de todos. Agradeço pela compreensão e permaneço à disposição para quaisquer esclarecimentos. Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC
+
+## 🚀 13ª Maratona de Cibereducação Cisco: inscrições abertas!
+*Espaço Coordenação — 21/09/2026 18:37* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/901145)
+
+Olá, pessoal! Começou no dia, 14/09, a 13ª Maratona de Cibereducação Cisco, uma excelente oportunidade para desenvolver conhecimentos em segurança digital e cibersegurança. A maratona acontecerá até 04/10 e é totalmente gratuita. Ao concluir o curso, os participantes recebem: ✅ Certificado de conclusão, que pode ser aproveitado como Atividade Complementar de Graduação (ACG); ✅ Distintivo digital (badge) para compartilhar no LinkedIn e outras redes sociais; ✅ Possibilidade de participar da 2ª etapa da Maratona, na qual serão oferecidos cursos gratuitos na área de Segurança Cibernética. A PUC Minas disponibilizou uma turma específica para participação: 🔗 Acesso à turma da PUC Minas: https://www.netacad.com/pt/courses/digital-safety-security?courseLang=pt-PT&instance_id=a05b8ae1-4865-4e55-a9bb-8000cd213d9f Links to an external site. 🔗 Mais informações sobre a Maratona Cisco: https://www.cisco.com/c/m/pt_br/brasil-digital-e-inclusivo/cibereducacao/aluno.html Links to an external site. Aproveitem a oportunidade para fortalecer seus conhecimentos em cibersegurança, enriquecer o currículo e conquistar uma certificação reconhecida pelo mercado. Bons estudos e sucesso a todos! Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC
+
+## COMUNICADO! 
+*Espaço Coordenação — 21/09/2026 18:33* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/901142)
+
+Prezados(as) alunos(as), Gostaríamos de lembrar que os estudantes da PUC Minas têm acesso a uma série de cursos gratuitos oferecidos por parceiros acadêmicos, proporcionando oportunidades adicionais de capacitação e certificação em tecnologias amplamente utilizadas pelo mercado, como AWS, Google e Cisco. Essas iniciativas estão disponíveis por meio das parcerias do ICEI. As inscrições podem ser realizadas diretamente no portal do ICEI, acessando o menu Parcerias: 🔗 Portal do ICEI - Parcerias icei.pucminas.br Links to an external site. Para quem deseja aprofundar conhecimentos em Cibersegurança, recomendamos especialmente a Trilha de Formação de Analista de Cibersegurança Júnior da Cisco, apresentada no infográfico em anexo. A formação é composta por cinco cursos principais, incluindo o módulo Cybersecurity Essentials, que reúne conteúdos fundamentais para a área e serve como base para os demais cursos da trilha. Além disso, a Google Cloud realizará um treinamento gratuito e aberto ao público no dia 25 de setembro, intitulado " Capacita+ : Construa com o Gemini". 📅 Data: 25 de setembro 🕘 Horário: 9h30 às 11h30 💻 Formato: On-line e gratuito O evento abordará as principais tendências da chamada Era Agêntica, apresentando na prática como criar agentes de Inteligência Artificial utilizando tecnologias do Google Cloud. Os participantes terão acesso a demonstrações, conteúdos exclusivos e orientações para continuar seus estudos e projetos na área de IA. ▶️ Link para participação: ht…
+
+## JORNADA PÓS GRADUAÇÃO - PERDEU A LIVE? 
+*Espaço Coordenação — 11/09/2026 18:55* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/898617)
+
+https://www.youtube.com/watch?v=lEEiol30TSo&t=10s
+
+## É HOJE (10/09/2026) - Jornada da Pós-graduação PUC Minas / 2s2026
+*Espaço Coordenação — 10/09/2026 19:35* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/898341)
+
+www.youtube.com/c/PUCMinasPósgraduacão
+
+## Estágio Não Obrigatório – Alunos da Pós-Graduação
+*Espaço Coordenação — 09/09/2026 16:11* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/897778)
+
+Prezados(as) alunos(as), Informamos que alunos regularmente matriculados na pós-graduação podem participar de estágio não obrigatório , como forma de complementar sua formação acadêmica e adquirir experiência prática na área de atuação. O estágio não obrigatório é opcional, mas deve estar alinhado com a área de pesquisa ou atuação do curso e ser compatível com os horários das atividades acadêmicas. Informações importantes: O estágio deve estar relacionado à área do curso; A carga horária não pode prejudicar o desempenho acadêmico, e deverá respeitar o limite de 30h semanais; A participação é opcional, mas requer a formalização junto à instituição de ensino; É necessário firmar um Termo de Compromisso entre o estudante, a empresa concedente e a instituição; O cadastro do estágio é feito exclusivamente pelo sistema APC (SGA – PUC Carreiras – Sistema de Atividades e Práticas Curriculares); O período para a atividade de estágio deverá ser entre a data de início e término do curso de origem do aluno. Para mais orientações sobre o procedimento e os documentos necessários, acesse o sistema APC ou entre em contato com a coordenação de estágios da pós-graduação, através do e-mail praticasiec@pucminas.br Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC
+
+## [IEC] Boas-vindas - ENGENHARIA DE INTELIGÊNCIA ARTIFICIAL E MLOPS - OFERTA 1 
+*Espaço Coordenação — 09/09/2026 15:23* — [abrir no Canvas](https://pucminas.instructure.com/courses/279179/discussion_topics/897740)
+
+Prezado(a) Aluno(a), Esperamos que você esteja bem. Seja muito bem-vindo(a) ao Instituto de Educação Continuada (IEC) da PUC Minas! Durante a realização do seu curso, serei seu ponto de apoio junto ao Núcleo de Gestão Acadêmica. Nossa principal forma de comunicação será por meio do Canvas , por isso é fundamental manter as notificações da plataforma ativas e seu endereço de e-mail sempre atualizado. As orientações de acesso aos sistemas institucionais foram encaminhadas no e-mail com o assunto "Credenciais de Acesso (login/senha - sistemas PUC)" . Sempre que precisar entrar em contato conosco, informe seu nome completo, nome do curso e número da oferta, para que possamos atendê-lo(a) com maior agilidade. Todos os documentos mencionados nesta mensagem estão disponíveis no Espaço da Coordenação : https://pucminas.instructure.com/courses/279179 Em caso de dúvidas, nossa equipe estará à disposição para auxiliá-lo(a). Início das aulas: As aulas terão início no dia 15/09/2026 , às 19h . A grade horária do curso, contendo a programação das aulas, disciplinas e professores, está disponível no Espaço da Coordenação. Caso ocorram alterações na programação, a comunicação será realizada por meio dos Avisos no Canvas. Acesso às aulas remotas As aulas remotas são realizadas com o apoio das plataformas Canvas e Microsoft Teams . Recomendamos que você realize o acesso aos sistemas antes do início das aulas para evitar eventuais dificuldades técnicas. Caso necessite de suporte, você poderá: A…
+

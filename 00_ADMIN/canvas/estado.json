@@ -1,0 +1,1051 @@
+{
+ "arquivos": {
+  "17884271": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/tree-silhouette.png",
+   "ja_existia": true,
+   "nome": "tree-silhouette.png",
+   "sha256": "784f5b80a530cda94f7744816318229015fc91e49360582916d08e7e6b967f70",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884272": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/video1.png",
+   "ja_existia": true,
+   "nome": "video1.png",
+   "sha256": "470cdb7cf2f734ec53e0bfd03b12bb896af5fa1bcc04b89539441aad7dde5679",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884273": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Unidade 4/Unidade 4.png",
+   "ja_existia": true,
+   "nome": "Unidade 1.png",
+   "sha256": "2ce1730bac818bc222f90c7189c5e320ccb9c0839d76b6802c4bb8ee63e8f0b0",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884274": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/lamp.png",
+   "ja_existia": true,
+   "nome": "lamp.png",
+   "sha256": "a173b7f013557bed2bae295479de6537646cf70ff66c612fe844fe4e0b083064",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884275": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/rocket1.png",
+   "ja_existia": true,
+   "nome": "rocket1.png",
+   "sha256": "21b5ab8560b36c2b18bfe776140eaa8f66af3ad571a715f77e89e4ebbd1821d4",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884276": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/info2.png",
+   "ja_existia": true,
+   "nome": "info2.png",
+   "sha256": "41f2d3b54b2b82dfbe118d719f254feee460124818bb63d0d3743ecacc71ce13",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884277": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/elearning1.png",
+   "ja_existia": true,
+   "nome": "elearning1.png",
+   "sha256": "4e2d0382582ada5544f3c85ca231412ef7341b5fc96f161dbe5c52b4c1804d10",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884278": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-preto.png",
+   "ja_existia": true,
+   "nome": "icone-preto.png",
+   "sha256": "36575576152acbe47955c78cf3b9356ff9401fc0e730e90ba27461b03e1d19be",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884279": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Unidade 4/Unidade 4.png",
+   "ja_existia": true,
+   "nome": "Unidade 2.png",
+   "sha256": "2ce1730bac818bc222f90c7189c5e320ccb9c0839d76b6802c4bb8ee63e8f0b0",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884280": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/clip.png",
+   "ja_existia": true,
+   "nome": "clip.png",
+   "sha256": "b679a186817b9b820169bdea998dda919a0a946e4f239a0b917905e706bc8514",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884281": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/rocket.png",
+   "ja_existia": true,
+   "nome": "rocket.png",
+   "sha256": "4c969eadb89ea98c762cf78a14b10c5c4f427a157677757cbdb82edc66b0801b",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884282": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/google-docs (1).png",
+   "ja_existia": true,
+   "nome": "google-docs (1).png",
+   "sha256": "bde9338ea0ce482530dbc4704d292bc5a8f871ecfcef769577b6b685c74d6c10",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884283": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/elearning-1.png",
+   "ja_existia": true,
+   "nome": "elearning-1.png",
+   "sha256": "36a9d86276bab3f5cc05c852db3b17e804536c9749b2358543f07584fa4ceaf1",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884284": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/home (4).png",
+   "ja_existia": true,
+   "nome": "home (4).png",
+   "sha256": "1769509905a30716a7721690666ed2d27c8b479006891a949b6ada4dc611adc4",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884285": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/info-1.png",
+   "ja_existia": true,
+   "nome": "info-1.png",
+   "sha256": "1f55d5591148092e63f779d4801e97380250eb82f211900791af273880cc06f6",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884286": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/elearning.png",
+   "ja_existia": true,
+   "nome": "elearning.png",
+   "sha256": "3cd1c5d3a4c1b4d68c3bdd9ab61ad52386bbbc6ceb8af455904985db53db860a",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884287": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/google-docs_azul.png",
+   "ja_existia": true,
+   "nome": "google-docs_azul.png",
+   "sha256": "9696f7c822319ec9d0fc9b9bb1c9a4efcd6888be41ceb74103aea24abb2d29a7",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884288": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/lamp-1.png",
+   "ja_existia": true,
+   "nome": "lamp-1.png",
+   "sha256": "5a2156c06f7559fa5dd05de296b7e3fef3a06cfd24fc72bc03629e55e4800b0b",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884289": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/puzzle.png",
+   "ja_existia": true,
+   "nome": "puzzle.png",
+   "sha256": "c3c6dab8c8ca9522b50ab7307e9311b454615a5659204abea29aa27f3fbb6eef",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884291": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/puzzle.png",
+   "ja_existia": true,
+   "nome": "puzzle-2.png",
+   "sha256": "c3c6dab8c8ca9522b50ab7307e9311b454615a5659204abea29aa27f3fbb6eef",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884292": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Imagem1prof.png",
+   "ja_existia": true,
+   "nome": "Imagem1prof.png",
+   "sha256": "afd51f096a6affa2adc24a49bd97f395f4991d1273aae588b479d2613b394069",
+   "updated_at": "2026-08-25T16:54:11Z"
+  },
+  "17884293": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/alvo (2).png",
+   "ja_existia": true,
+   "nome": "alvo (2).png",
+   "sha256": "10315d7435e820d2400e1d27c8170036862ead096ee3ba6f1d6bea178de4f62d",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884294": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/lamp (1).png",
+   "ja_existia": true,
+   "nome": "lamp (1).png",
+   "sha256": "f9e37e1874a5c55c2b74ed75982dae0b8384a754ff446469efaddc7be94d97cc",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884295": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/page.png",
+   "ja_existia": true,
+   "nome": "page.png",
+   "sha256": "fef2f8417874e55ccd84fb8e447d6c72fa516dc11a27da4ede0dadc12067491f",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884296": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/laptop.png",
+   "ja_existia": true,
+   "nome": "laptop.png",
+   "sha256": "b70209a4ccf7f1c89ad82882c2eaa747a98ae84923b704c4ae15ba55b1e2d596",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884297": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/arrow.png",
+   "ja_existia": true,
+   "nome": "arrow.png",
+   "sha256": "e4c4756d336db4b62be775bd9bfc4772bbde764a68ccaf1e71e963cec0932e47",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884298": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/google-docs.png",
+   "ja_existia": true,
+   "nome": "google-docs.png",
+   "sha256": "84e1fc4ae209f70d085d30408fb1efe166fe02b2c5923a8d0830088bb8121ecc",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884299": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Unidade 4/Unidade 4.png",
+   "ja_existia": true,
+   "nome": "seta.png",
+   "sha256": "2ce1730bac818bc222f90c7189c5e320ccb9c0839d76b6802c4bb8ee63e8f0b0",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884300": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/material-b.png",
+   "ja_existia": true,
+   "nome": "material-b.png",
+   "sha256": "415aeeaba2eaa66965af1ac44912d57f3ab30623a65b5dddf95af8607c0dc215",
+   "updated_at": "2026-08-25T16:54:12Z"
+  },
+  "17884301": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/bussola.png",
+   "ja_existia": true,
+   "nome": "bussola.png",
+   "sha256": "bb7e004b4ea9bd56945d0606b1f9bcb350ab30bc2214467ea84d537b652401db",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884303": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/elearning_.png",
+   "ja_existia": true,
+   "nome": "elearning_.png",
+   "sha256": "6e9a6ca044c4fbd480186b06cf1d29f16bf349b2e450eb3624ae661964176469",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884304": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/home.png",
+   "ja_existia": true,
+   "nome": "home.png",
+   "sha256": "96d4fdb883abd0f5ec18b0169fa72c2ccf03196ed08cd2e616e7b81524c9108f",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884305": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/online-class (1).png",
+   "ja_existia": true,
+   "nome": "online-class (1).png",
+   "sha256": "baa42d9fd5ed5038efa618667691afffc98b81198d35186adc9e139cf629f9b7",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884306": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Unidade 4/Unidade 4.png",
+   "ja_existia": true,
+   "nome": "Unidade 4.png",
+   "sha256": "2ce1730bac818bc222f90c7189c5e320ccb9c0839d76b6802c4bb8ee63e8f0b0",
+   "updated_at": "2026-08-25T16:54:18Z"
+  },
+  "17884307": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/icone-ativiidade-aberta.png",
+   "ja_existia": true,
+   "nome": "icone-ativiidade-aberta.png",
+   "sha256": "314d6a1582ddbf4b1d4594edbd3ff9488b0ada6910c39c7c4b214961e8478d59",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884308": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/material.png",
+   "ja_existia": true,
+   "nome": "material.png",
+   "sha256": "9a240b8ccafcf2501ce4666c98e147efae3757f21008fa07d14faa061fb7a09d",
+   "updated_at": "2026-08-25T16:54:13Z"
+  },
+  "17884309": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Unidade 4/Unidade 4.png",
+   "ja_existia": true,
+   "nome": "Unidade 3.png",
+   "sha256": "2ce1730bac818bc222f90c7189c5e320ccb9c0839d76b6802c4bb8ee63e8f0b0",
+   "updated_at": "2026-08-25T16:54:16Z"
+  },
+  "17884310": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/info 2.jpg",
+   "ja_existia": true,
+   "nome": "info 2.jpg",
+   "sha256": "d5d0e57928a8d07248e2fe08f5d156a318dd924a50aab6140c278d924edb89ef",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884311": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-coruja.png",
+   "ja_existia": true,
+   "nome": "icone-coruja.png",
+   "sha256": "c6378f63f71ffea766153bad6309d19c36f1c64ae74399fd94cd2e082ca0adc0",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884312": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/importancia sustentabilidade.pdf",
+   "ja_existia": true,
+   "nome": "importancia sustentabilidade.pdf",
+   "sha256": "0c954b1513de3f1aa999641610d65d18cdf27d07ef3c21bf4297f49a032f7ffa",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884313": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/unidade 1 capacitacao_.png",
+   "ja_existia": true,
+   "nome": "unidade 1 capacitacao_.png",
+   "sha256": "b4d348f3b5e19fc3b4ad5ac26b2587673ac6f71698efdb062cbcd09ecdb6017a",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884314": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/video.png",
+   "ja_existia": true,
+   "nome": "video.png",
+   "sha256": "be36d858ef15dc1fb9d92349bde080a38415b57873b0924fa3c97c1e2603b3af",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884315": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/banner-pos-2022.jpg",
+   "ja_existia": true,
+   "nome": "banner-pos-2022.jpg",
+   "sha256": "7e3c322970addd4f9c94734c07d905be7da2b03b2ab0248e6a39ad2ec8b1e190",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884316": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Play.png",
+   "ja_existia": true,
+   "nome": "Play.png",
+   "sha256": "56aeb1cbbaa5f1dfde0a3b5c8eb598c4c2f4343d22a00c75e346ff878432a3da",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884317": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-bussola.png",
+   "ja_existia": true,
+   "nome": "icone-bussola.png",
+   "sha256": "eb2210b0fe0043e4ee23d76025972cb88ea04fc9e8d9ee341b48dc193e6d63ac",
+   "updated_at": "2026-08-25T16:54:14Z"
+  },
+  "17884318": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-lampada.png",
+   "ja_existia": true,
+   "nome": "icone-lampada.png",
+   "sha256": "d79998f86c690140224192254080e8f7850e2d9b676b0a4916d16e5cba1124d3",
+   "updated_at": "2026-08-25T16:54:15Z"
+  },
+  "17884319": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Leitura.png",
+   "ja_existia": true,
+   "nome": "Leitura.png",
+   "sha256": "a5cf041a03f2e09136e3446971d78264ac713b5e3461a5d649e38543d885cd80",
+   "updated_at": "2026-08-25T16:54:15Z"
+  },
+  "17884321": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/course_image/thumbnail-pos.jpg",
+   "ja_existia": true,
+   "nome": "thumbnail-pos.jpg",
+   "sha256": "e065df632c57b015e8461b30a2b0a64254171e8954facc631c2e163549a7e5b9",
+   "updated_at": "2026-08-25T16:54:20Z"
+  },
+  "17884322": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/unidade 1 capacitacao.png",
+   "ja_existia": true,
+   "nome": "unidade 1 capacitacao.png",
+   "sha256": "cb09870b548506311dd03eaae8e0253f87dbe6b410726a1eafb2032ae5bde9e1",
+   "updated_at": "2026-08-25T16:54:15Z"
+  },
+  "17884323": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/sust e des sustentavel.pdf",
+   "ja_existia": true,
+   "nome": "sust e des sustentavel.pdf",
+   "sha256": "93d1c1ffa228a7375ecfb7134b966476b0d5ba107516d8c354099aec1918b859",
+   "updated_at": "2026-08-25T16:54:15Z"
+  },
+  "17884324": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Exemplo/sustentabilidade.png",
+   "ja_existia": true,
+   "nome": "sustentabilidade.png",
+   "sha256": "b489ed8096945b48f7fec9948eed2fc650eaf631e8b769ad4aab097f43bb61c5",
+   "updated_at": "2026-08-25T16:54:16Z"
+  },
+  "17884360": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/material-b.png",
+   "ja_existia": true,
+   "nome": "material-b.png",
+   "sha256": "415aeeaba2eaa66965af1ac44912d57f3ab30623a65b5dddf95af8607c0dc215",
+   "updated_at": "2026-08-25T16:55:30Z"
+  },
+  "17884371": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-coruja.png",
+   "ja_existia": true,
+   "nome": "icone-coruja.png",
+   "sha256": "c6378f63f71ffea766153bad6309d19c36f1c64ae74399fd94cd2e082ca0adc0",
+   "updated_at": "2026-08-25T16:55:31Z"
+  },
+  "17884375": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/banner-pos-2022.jpg",
+   "ja_existia": true,
+   "nome": "banner-pos-2022.jpg",
+   "sha256": "7e3c322970addd4f9c94734c07d905be7da2b03b2ab0248e6a39ad2ec8b1e190",
+   "updated_at": "2026-08-25T16:55:32Z"
+  },
+  "17884376": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Play.png",
+   "ja_existia": true,
+   "nome": "Play.png",
+   "sha256": "56aeb1cbbaa5f1dfde0a3b5c8eb598c4c2f4343d22a00c75e346ff878432a3da",
+   "updated_at": "2026-08-25T16:55:32Z"
+  },
+  "17884377": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-bussola.png",
+   "ja_existia": true,
+   "nome": "icone-bussola.png",
+   "sha256": "eb2210b0fe0043e4ee23d76025972cb88ea04fc9e8d9ee341b48dc193e6d63ac",
+   "updated_at": "2026-08-25T16:55:32Z"
+  },
+  "17884378": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/icone-lampada.png",
+   "ja_existia": true,
+   "nome": "icone-lampada.png",
+   "sha256": "d79998f86c690140224192254080e8f7850e2d9b676b0a4916d16e5cba1124d3",
+   "updated_at": "2026-08-25T16:55:32Z"
+  },
+  "17884379": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/Leitura.png",
+   "ja_existia": true,
+   "nome": "Leitura.png",
+   "sha256": "a5cf041a03f2e09136e3446971d78264ac713b5e3461a5d649e38543d885cd80",
+   "updated_at": "2026-08-25T16:55:32Z"
+  },
+  "17884619": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Layout/banner-pos-2022.jpg",
+   "ja_existia": true,
+   "nome": "banner-pos-2022.jpg",
+   "sha256": "7e3c322970addd4f9c94734c07d905be7da2b03b2ab0248e6a39ad2ec8b1e190",
+   "updated_at": "2026-08-25T17:01:16Z"
+  },
+  "18056303": {
+   "caminho": "01_FONTES/puc_oficial/institucional/GUIA DO ALUNO_IEC PUC MINAS_cursos sincronos.pdf",
+   "ja_existia": true,
+   "nome": "GUIA DO ALUNO_IEC PUC MINAS_cursos sincronos.pdf",
+   "sha256": "b585a4c65d36c9613cfe54e87c8eed7a1afbd4c5cf5e7c3a9740683225ee9ed6",
+   "updated_at": "2026-09-18T14:59:30Z"
+  },
+  "18056304": {
+   "caminho": "00_ADMIN/guias_sistemas/Abertura de chamados de serviços financeiros_Aluno.pdf",
+   "ja_existia": true,
+   "nome": "Abertura de chamados de serviços financeiros_Aluno.pdf",
+   "sha256": "1a7153e58ee8688c60a048bbca91cf659236898b38c5b88a66bd6c97b390fcfc",
+   "updated_at": "2026-09-01T19:17:14Z"
+  },
+  "18056305": {
+   "caminho": "00_ADMIN/guias_sistemas/Abertura de chamados de suporte técnico_Aluno.pdf",
+   "ja_existia": true,
+   "nome": "Abertura de chamados de suporte técnico_Aluno.pdf",
+   "sha256": "0153de4e416d7bdf1a94e292ba1682905d024fdcbba39c622adabf15d9a4e539",
+   "updated_at": "2026-09-01T19:17:14Z"
+  },
+  "18056317": {
+   "caminho": "00_ADMIN/regulamentos/TRABALHO DE CONCLUSÃO DE CURSO.png",
+   "ja_existia": true,
+   "nome": "TRABALHO DE CONCLUSÃO DE CURSO.png",
+   "sha256": "e3819a149cdf076a15dd4c14d1bf2fbd438f3d30a9155e58d566f8e7964ede10",
+   "updated_at": "2026-09-01T19:17:52Z"
+  },
+  "18107727": {
+   "caminho": "00_ADMIN/guias_sistemas/Tutorial Sistemas Acadêmicos Aluno 2s26.pdf",
+   "ja_existia": true,
+   "nome": "Tutorial Sistemas Acadêmicos Aluno 2s26.pdf",
+   "sha256": "d6a0ab2e8acff7cf4af023d2180fb5532c8165a1579e1d37e02e3381aa85f60a",
+   "updated_at": "2026-09-11T22:33:22Z"
+  },
+  "18107728": {
+   "caminho": "00_ADMIN/guias_sistemas/Abertura de chamados de serviços financeiros_Aluno-1.pdf",
+   "ja_existia": true,
+   "nome": "Abertura de chamados de serviços financeiros_Aluno-1.pdf",
+   "sha256": "2e015c1d05c385158df8b9b960348ad309963fad7ce01ddb74319788152891c8",
+   "updated_at": "2026-09-13T15:50:19Z"
+  },
+  "18107729": {
+   "caminho": "00_ADMIN/guias_sistemas/Abertura de chamados de suporte técnico_Aluno-1.pdf",
+   "ja_existia": true,
+   "nome": "Abertura de chamados de suporte técnico_Aluno-1.pdf",
+   "sha256": "cdcdc47feb1172f300a2cfa7972c91410392de06300cfbae9bbb7fb4f5883a89",
+   "updated_at": "2026-09-12T15:06:46Z"
+  },
+  "18107783": {
+   "caminho": "00_ADMIN/regulamentos/Revisão de nota .png",
+   "ja_existia": true,
+   "nome": "Revisão de nota .png",
+   "sha256": "0825e3ad8ab8ceb38d9a688543fac92463aedf5c9f8ba3a8592742373464dbca",
+   "updated_at": "2026-09-08T21:46:38Z"
+  },
+  "18131854": {
+   "caminho": "00_ADMIN/regulamentos/ORIENTAÇÕES ESTÁGIO.pdf",
+   "ja_existia": true,
+   "nome": "ORIENTAÇÕES ESTÁGIO.pdf",
+   "sha256": "94874c34e648e03d0ef9dff5a2c1652b5db7081c9f4ba3087472a8df2ac982ef",
+   "updated_at": "2026-09-11T23:42:47Z"
+  },
+  "18155706": {
+   "caminho": "00_ADMIN/avisos_canvas/Jornada da Pós 2s2026_Feed - Perdeu a Live - IEC.jpg",
+   "ja_existia": true,
+   "nome": "Jornada da Pós 2s2026_Feed - Perdeu a Live - IEC.jpg",
+   "sha256": "e4d55c93d91aaa588cdd71b217cb27653746ec42cec0c81f59803d4663bf3222",
+   "updated_at": "2026-09-11T21:47:38Z"
+  },
+  "18208922": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 1 - Arquiteturas e fundamentos de pipelines de dados/Apresentação/Aula 1 - Arquiteturas e fundamentos de pipelines de dados.pdf",
+   "ja_existia": true,
+   "nome": "Aula 1 - Arquiteturas e fundamentos de pipelines de dados.pdf",
+   "sha256": "ede0253851e93d1fe157e6076d3762b73b09d8ed333404155902d26110bce36e",
+   "updated_at": "2026-09-15T22:16:19Z"
+  },
+  "18211098": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/Exercício 1 - Arquiteturas e fundamentos de pipelines de dados.docx",
+   "nome": "Exercício 1 - Arquiteturas e fundamentos de pipelines de dados.docx",
+   "sha256": "e9c7dbdead76293b8eac3a82742b91cf435238d8ce4e005938bef8d14852b948",
+   "updated_at": "2026-09-16T00:21:43Z"
+  },
+  "18230255": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_1/Unidade 1 - aula 01 - Fundamentos, Plataforma e Governança.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 1 - aula 01 - Fundamentos, Plataforma e Governança.pdf",
+   "sha256": "10956522944e9e9966b051d2733be02b03a322ca4cf5310ed885945cbcc83f79",
+   "updated_at": "2026-09-18T11:26:31Z"
+  },
+  "18428934": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_1/Unidade 1 - aula 02 - Rede, Computação e Cloud-Native.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 1 - aula 02 - Rede, Computação e Cloud-Native.pdf",
+   "sha256": "631ebbb433b75bf28586f43c4f214f4638d7762d653eb1b39c0b5a2bfb49961b",
+   "updated_at": "2026-09-25T12:24:32Z"
+  },
+  "18470889": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 2 -Ingestão e integração de dados/Apresentação/Aula 2 - Ingestão e integração de dados.pdf",
+   "ja_existia": true,
+   "nome": "Aula 2 - Ingestão e integração de dados.pdf",
+   "sha256": "c525aef2df95979d2ffc42b62953eb5041e4cde894d90dd7be04ab124810e793",
+   "updated_at": "2026-09-29T23:06:24Z"
+  },
+  "18493143": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_2/Unidade 2 - aula 03 - Armazenamento e Data Lakes.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 2 - aula 03 - Armazenamento e Data Lakes.pdf",
+   "sha256": "4d62c661a3456e93722d8e87cf519e5e3e8f4e5dfbc5f8f733cf8f1d85676a04",
+   "updated_at": "2026-10-02T04:15:46Z"
+  },
+  "18524039": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 3 - Transformação e armazenamento de dados/Apresentação/Aula 3 - Transformação e armazenamento de dados.pdf",
+   "ja_existia": true,
+   "nome": "Aula 3 - Transformação e armazenamento de dados.pdf",
+   "sha256": "e18b641a92a6326af75bd6fe9c7cf21b700af91e57567c5a5fe9328b57014cf8",
+   "updated_at": "2026-10-06T22:18:51Z"
+  },
+  "18536835": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/raw-customers-1000.csv",
+   "nome": "raw-customers-1000.csv",
+   "sha256": "aa534484c412ab9c0cc941e3c8114bc708284e332e6f484a6c4bf496dbffc93b",
+   "updated_at": "2026-10-08T22:26:11Z"
+  },
+  "18559331": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/02 - Apresentação da disciplina/Apresentação da disciplina-2.pptx",
+   "nome": "Apresentação da disciplina-2.pptx",
+   "sha256": "a13c4d90b1ac62d1aa6d8e4a79ef3c2df843ad8f1dca39ca6f9e9992e53bfaaa",
+   "updated_at": "2026-11-03T22:53:34Z"
+  },
+  "18559365": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Introdução-1.pptx",
+   "nome": "Introdução-1.pptx",
+   "sha256": "931c6ddd5519b3ea2facda102ab615c615162f2590bc4f83d94b7cb014ec21c3",
+   "updated_at": "2026-11-03T22:54:01Z"
+  },
+  "18559396": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Origem Evolução.pptx",
+   "nome": "Origem Evolução.pptx",
+   "sha256": "8beb2853b596faadd80d48326f51b9b67504097f5862d3bbc92b1b8d7c0dd256",
+   "updated_at": "2026-11-03T22:54:08Z"
+  },
+  "18559402": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Introdução aos containers-1.pptx",
+   "nome": "Introdução aos containers-1.pptx",
+   "sha256": "c0c65199ce8eb95e117da61982aa7ecd611ed08125ac3e6d056053c522d7db3c",
+   "updated_at": "2026-11-10T23:26:08Z"
+  },
+  "18559403": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Instalando Docker.pptx",
+   "nome": "Instalando Docker.pptx",
+   "sha256": "933ef4ac86594e030f9083d00e8d6abd650c84df24ddb83dc827928dbb7708ae",
+   "updated_at": "2026-11-10T23:26:57Z"
+  },
+  "18559404": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Ciclo de vida.pptx",
+   "nome": "Ciclo de vida.pptx",
+   "sha256": "2651397b5de8865d8474b0852aee06f0250f4b6172a14d25f1d61227a93d89e3",
+   "updated_at": "2026-11-10T23:28:20Z"
+  },
+  "18559468": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Criando containers.pptx",
+   "nome": "Criando containers.pptx",
+   "sha256": "e8e1d62f21f3c399b8b783b0ed6fdfff7d7c2c44226b04478a4cc1dee3048b8a",
+   "updated_at": "2026-11-03T22:52:53Z"
+  },
+  "18559473": {
+   "grande": true,
+   "nome": "Instalacao docker-1.mp4",
+   "updated_at": "2026-11-03T21:45:53Z"
+  },
+  "18559479": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Conteiner Internals.pptx",
+   "nome": "Conteiner Internals.pptx",
+   "sha256": "4fb142a761c7db6eb08a852c4c1a00d9251efca3f06963f1700064a612ae637e",
+   "updated_at": "2026-11-03T22:52:55Z"
+  },
+  "18559523": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Volumes And Network-1.pptx",
+   "nome": "Docker Volumes And Network-1.pptx",
+   "sha256": "0fcde09716782cf07d083ff45d605ca1389e8866f9bb12206aa709733d64f5ee",
+   "updated_at": "2026-11-03T22:52:56Z"
+  },
+  "18559538": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Engines.pptx",
+   "nome": "Docker Engines.pptx",
+   "sha256": "bc1e0f8a3bd315c7926637017505b386c2930949108a164f3366f8303413f866",
+   "updated_at": "2026-11-03T22:52:58Z"
+  },
+  "18559549": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Registry.pptx",
+   "nome": "Docker Registry.pptx",
+   "sha256": "ae1591fdbf1591612c77cabcced47f77eb01c8a168ac5b24901d9f00c4d71342",
+   "updated_at": "2026-11-03T22:53:03Z"
+  },
+  "18559585": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Logs.pptx",
+   "nome": "Docker Logs.pptx",
+   "sha256": "eba51e751314f3fc22e5270caa8d241584a582e91ed0ae4ddc37b420fc98d271",
+   "updated_at": "2026-11-08T16:57:27Z"
+  },
+  "18559614": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Segurança.pptx",
+   "nome": "Segurança.pptx",
+   "sha256": "2f44bc0aa83341e0777cc20b768ee6152522d997bd2c468689e9fe4a40e1565d",
+   "updated_at": "2026-11-08T16:57:28Z"
+  },
+  "18559628": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/DevContainers.pptx",
+   "nome": "DevContainers.pptx",
+   "sha256": "bb2bd20286a248355481bc94026dc3a9a74e93109417bc47e88feaf6acf82628",
+   "updated_at": "2026-11-08T16:57:28Z"
+  },
+  "18559631": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Compose.pptx",
+   "nome": "Docker Compose.pptx",
+   "sha256": "4df354910756da53691a15a833e8fce4bff80d19c06fd41eb3d922a5960bdd41",
+   "updated_at": "2026-11-08T16:57:29Z"
+  },
+  "18559766": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Arquitetura Kubernetes-2.pptx",
+   "nome": "Arquitetura Kubernetes-2.pptx",
+   "sha256": "a4b039401050ae89a7df8dcd6a375bb51b76653f011a5f1b9d1bd4f22e39828f",
+   "updated_at": "2026-11-03T22:53:12Z"
+  },
+  "18559810": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Introdução ao Kubernetes-2.pptx",
+   "nome": "Introdução ao Kubernetes-2.pptx",
+   "sha256": "bc48bb52d6d05a1ba9605398f9b1e8610f68118395b17c603989c6620657926b",
+   "updated_at": "2026-11-08T16:57:34Z"
+  },
+  "18559833": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Intoducao a orquestracao-2.pptx",
+   "nome": "Intoducao a orquestracao-2.pptx",
+   "sha256": "4f8db7a4461c8264e741a0a6fa9e5180951026898c9dfac32f256296cc773f3f",
+   "updated_at": "2026-11-08T16:57:35Z"
+  },
+  "18559840": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Gerenciamento de aplicações-2.pptx",
+   "nome": "Gerenciamento de aplicações-2.pptx",
+   "sha256": "80ffb6c9afd3fad292282e0b8eadc37f612a981967bf07fb9b25463b40b02f08",
+   "updated_at": "2026-11-08T16:57:37Z"
+  },
+  "18559841": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/AutoScale-1.pptx",
+   "nome": "AutoScale-1.pptx",
+   "sha256": "fffb6d64e11ff41929e66d47bdfcbb77a78c229606d3b2cec77bf85d83c23d58",
+   "updated_at": "2026-11-08T16:57:37Z"
+  },
+  "18559902": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Helm-2.pptx",
+   "nome": "Helm-2.pptx",
+   "sha256": "32304802017fb8811b85414e1aedd6aea6ab0b1ee8362a4bbb4699336f63b24f",
+   "updated_at": "2026-11-08T16:57:38Z"
+  },
+  "18559908": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/segurança-2.pptx",
+   "nome": "segurança-2.pptx",
+   "sha256": "91bba1cfb98e48b2cd6c42f32565e596e330a77e5fc1acd12f7c38fc1410e8a4",
+   "updated_at": "2026-11-08T16:57:39Z"
+  },
+  "18559910": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Network E Storage-2.pptx",
+   "nome": "Network E Storage-2.pptx",
+   "sha256": "f76a9b05df0c37674116eb7836932b43d5e91da31e5c5fa8ba4a7e4e28c94c89",
+   "updated_at": "2026-11-08T16:57:40Z"
+  },
+  "18562455": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_2/Unidade 2 - aula 04 - Streaming, Analytics e IaC.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 2 - aula 04 - Streaming, Analytics e IaC.pdf",
+   "sha256": "099318617b26b0548f75531c4fdf3cabf3d5e21323e0b60302d176455ff95c53",
+   "updated_at": "2026-10-09T17:10:07Z"
+  },
+  "18623467": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_3/Unidade 3 - aula 05 - Serverless, Infraestrutura para IA e MLOps.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 3 - aula 05 - Serverless, Infraestrutura para IA e MLOps.pdf",
+   "sha256": "375f7d953937c1c6042f94fb217d28dffbb9254f165e87bc47596f9f61169246",
+   "updated_at": "2026-10-17T21:30:23Z"
+  },
+  "18662001": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 5 - Feature Engineering e Feature Stores/Apresentação/Aula 5 - Feature Engineering e Feature Stores.pdf",
+   "ja_existia": true,
+   "nome": "Aula 5 - Feature Engineering e Feature Stores.pdf",
+   "sha256": "71d8a046a3180a685edf13a285e19d838b45919dd27c808c950131b96eef0055",
+   "updated_at": "2026-10-20T22:09:36Z"
+  },
+  "18662014": {
+   "caminho": "disciplinas/01_pipeline_dados/00_original/Aula 5 - Feature Engineering e Feature Stores/Exercícios/Exercício 5 - Feature engineering e feature store.docx",
+   "ja_existia": true,
+   "nome": "Exercício 5 - Feature engineering e feature store.docx",
+   "sha256": "a79da323285d0e13ca0e495560612eaf0be81bfbf5259bbfda5ef38e9c2fb837",
+   "updated_at": "2026-10-21T00:03:38Z"
+  },
+  "18663908": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/transacoes_bancarias.csv",
+   "nome": "transacoes_bancarias.csv",
+   "sha256": "851fae82a15c27360435b8a1665fd8517e361e6066bcd7f8bb1449627b2fa923",
+   "updated_at": "2026-10-21T22:58:12Z"
+  },
+  "18680921": {
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/Plano de Ensino_ORQUESTRAÇÃO_DE_WORKFLOWS.pdf",
+   "ja_existia": true,
+   "nome": "Plano de Ensino_ORQUESTRAÇÃO_DE_WORKFLOWS.pdf",
+   "sha256": "1aeae0ce2ba4553ebeee8f218e8e6c2b9b9a9ad6870ac8d26916e56a410e7c3c",
+   "updated_at": "2026-11-11T22:17:53Z"
+  },
+  "18682553": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/Unidade_3/Unidade 3 - aula 06 - IA Generativa, Agentes e FinOps.pdf",
+   "ja_existia": true,
+   "nome": "Unidade 3 - aula 06 - IA Generativa, Agentes e FinOps.pdf",
+   "sha256": "346cdc9cd2e71cf1acf78fad2e97d15ec338a6e9dd4660d7594fae40f592a220",
+   "updated_at": "2026-10-23T15:25:55Z"
+  },
+  "18689882": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "00_ADMIN/coordenacao_canvas/00_original/canvas/00 - Aba Arquivos/Manual MFA Acadêmico.pdf",
+   "nome": "Manual MFA Acadêmico.pdf",
+   "sha256": "9efa0f12ca54e7893e7a6839be879ad80a391bb9d7b83ad637cd74a0e2c12917",
+   "updated_at": "2026-10-23T21:34:48Z"
+  },
+  "18818302": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/02 - Apresentação da disciplina/Plano de Ensino.docx",
+   "nome": "Plano de Ensino.docx",
+   "sha256": "a6d758fb0c295089d1bf6f455183bba9e765223fc2e961d68a4de941c78ce1bc",
+   "updated_at": "2026-11-03T22:06:48Z"
+  },
+  "18822634": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/linux-basics.pdf",
+   "nome": "linux-basics.pdf",
+   "sha256": "457cec3686ecd1b6d0ffd608ec86b8e47daea14d535dae56b7334fadf8f606c5",
+   "updated_at": "2026-11-04T22:04:41Z"
+  },
+  "18830711": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "00_ADMIN/coordenacao_canvas/00_original/canvas/01 - GRADE HORÁRIA/04.11.26 - SisIEC - Grade Horária - Engenharia de Inteligência Artificial E MLOps -.pdf",
+   "nome": "04.11.26 - SisIEC - Grade Horária - Engenharia de Inteligência Artificial E MLOps - EAD com aulas ao vivo 1.1 (2_2026).pdf",
+   "sha256": "9484a7c2f31c34d2dc682d8ff57fef2f117cc8c0bc57c34f4dc5aa9235f30e44",
+   "updated_at": "2026-11-04T23:19:32Z"
+  },
+  "18857115": {
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/Encontro 01 - Orquestração de Workflow.pdf",
+   "ja_existia": true,
+   "nome": "Encontro 01 - Orquestração de Workflow.pdf",
+   "sha256": "e60d75da58d498338e6eac58e92da2ce0706a48ecda5d95412dd2c3cd35d61e4",
+   "updated_at": "2026-11-11T22:18:03Z"
+  },
+  "18857142": {
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/lab_01-airflow.zip",
+   "ja_existia": true,
+   "nome": "lab_01-airflow.zip",
+   "sha256": "b9a545579a5e51745063bdaf3cdfbbdfdfee2a2f391dcf7aa0911cfa6ee7dab9",
+   "updated_at": "2026-11-08T22:22:58Z"
+  },
+  "18857221": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/03 - MATERIAL COMPLEMENTAR/preparacao_ambiente [Python].pdf",
+   "nome": "preparacao_ambiente [Python].pdf",
+   "sha256": "0b76cf77c049abfc63ebc55c70646627e920e6ad551d4ea2538dffd3289e8ac0",
+   "updated_at": "2026-11-09T16:15:11Z"
+  },
+  "18857289": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/03 - MATERIAL COMPLEMENTAR/Material_Completo - [Python].zip",
+   "nome": "Material_Completo - [Python].zip",
+   "sha256": "8210d2e36fd21912b383deec4743c420be8a1710f63c0fe723fc3dfde46c485d",
+   "updated_at": "2026-11-08T22:44:41Z"
+  },
+  "18889567": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/Encontro 02 - Orquestração de Workflow.pdf",
+   "nome": "Encontro 02 - Orquestração de Workflow.pdf",
+   "sha256": "f5982d862dd1b5bb2b47b137ea234ef34c7843f6141a3f5886100bb1935965b7",
+   "updated_at": "2026-11-13T15:47:16Z"
+  },
+  "18889698": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/lab-airflow-11-01-2026.zip",
+   "nome": "lab-airflow-11-01-2026.zip",
+   "sha256": "aaa3dfe555f7aeae5f01b75f39d2672581a44da2e1c31eaa899d4703ef6239d1",
+   "updated_at": "2026-11-11T22:11:44Z"
+  },
+  "18889709": {
+   "baixado_em": "2026-11-15T18:39:58.812669-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/09 - ATIVIDADES AVALIATIVAS/TRABALHO_FINAL_ORQUESTRACAO.pdf",
+   "nome": "TRABALHO_FINAL_ORQUESTRACAO.pdf",
+   "sha256": "b8258a4f6f9945bd6d2bb05f8078ffb79572a0a16d15cfb916b497b4033220eb",
+   "updated_at": "2026-11-11T22:25:30Z"
+  },
+  "279168:url:6842693": {
+   "nome": "Maquina OVA do Curso",
+   "url": "https://storage.googleapis.com/iec-containers-orquestration/iec-containers.zip"
+  }
+ },
+ "atividades": {
+  "1442224": {
+   "due_at": "2026-09-23T02:59:59Z",
+   "entregue": true,
+   "nome": "Exercício 1 - Arquiteturas e fundamentos de pipelines de dados"
+  },
+  "1449178": {
+   "due_at": "2026-10-05T02:59:59Z",
+   "entregue": true,
+   "nome": "Atividade Avaliativa 1"
+  },
+  "1454889": {
+   "due_at": "2026-10-26T02:59:59Z",
+   "entregue": true,
+   "nome": "Atividade Avaliativa 2"
+  },
+  "1457600": {
+   "due_at": "2026-12-02T02:59:00Z",
+   "entregue": false,
+   "nome": "Trabalho prático Unidade 1 Docker"
+  },
+  "1457602": {
+   "due_at": "2026-12-25T02:59:00Z",
+   "entregue": false,
+   "nome": "Trabalho prático Unidade 2 Kubernetes"
+  },
+  "1457603": {
+   "due_at": "2026-12-25T02:59:00Z",
+   "entregue": false,
+   "nome": "Trabalho em Grupo Unidade II - Kubernetes"
+  },
+  "1461215": {
+   "due_at": "2026-11-05T02:59:59Z",
+   "entregue": true,
+   "nome": "Atividade Avaliativa Final"
+  },
+  "1462226": {
+   "due_at": "2026-10-28T02:59:59Z",
+   "entregue": true,
+   "nome": "Exercício 5 - Feature engineering e feature store"
+  },
+  "1469916": {
+   "due_at": "2026-11-25T02:59:00Z",
+   "entregue": false,
+   "nome": "Teste Fixação unidade 1 Docker"
+  },
+  "1472100": {
+   "due_at": "2026-11-26T02:59:59Z",
+   "entregue": false,
+   "nome": "Atividade 01"
+  }
+ },
+ "avisos": {
+  "897740": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-09T18:23:23Z",
+   "texto": "Prezado(a) Aluno(a), Esperamos que você esteja bem. Seja muito bem-vindo(a) ao Instituto de Educação Continuada (IEC) da PUC Minas! Durante a realização do seu curso, serei seu ponto de apoio junto ao Núcleo de Gestão Acadêmica. Nossa principal forma de comunicação será por meio do Canvas , por isso é fundamental manter as notificações da plataforma ativas e seu endereço de e-mail sempre atualizado. As orientações de acesso aos sistemas institucionais foram encaminhadas no e-mail com o assunto \"Credenciais de Acesso (login/senha - sistemas PUC)\" . Sempre que precisar entrar em contato conosco, informe seu nome completo, nome do curso e número da oferta, para que possamos atendê-lo(a) com maior agilidade. Todos os documentos mencionados nesta mensagem estão disponíveis no Espaço da Coordenação : https://pucminas.instructure.com/courses/279179 Em caso de dúvidas, nossa equipe estará à disposição para auxiliá-lo(a). Início das aulas: As aulas terão início no dia 15/09/2026 , às 19h . A grade horária do curso, contendo a programação das aulas, disciplinas e professores, está disponível no Espaço da Coordenação. Caso ocorram alterações na programação, a comunicação será realizada por meio dos Avisos no Canvas. Acesso às aulas remotas As aulas remotas são realizadas com o apoio das plataformas Canvas e Microsoft Teams . Recomendamos que você realize o acesso aos sistemas antes do início das aulas para evitar eventuais dificuldades técnicas. Caso necessite de suporte, você poderá: A…",
+   "titulo": "[IEC] Boas-vindas - ENGENHARIA DE INTELIGÊNCIA ARTIFICIAL E MLOPS - OFERTA 1 ",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/897740"
+  },
+  "897778": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-09T19:11:27Z",
+   "texto": "Prezados(as) alunos(as), Informamos que alunos regularmente matriculados na pós-graduação podem participar de estágio não obrigatório , como forma de complementar sua formação acadêmica e adquirir experiência prática na área de atuação. O estágio não obrigatório é opcional, mas deve estar alinhado com a área de pesquisa ou atuação do curso e ser compatível com os horários das atividades acadêmicas. Informações importantes: O estágio deve estar relacionado à área do curso; A carga horária não pode prejudicar o desempenho acadêmico, e deverá respeitar o limite de 30h semanais; A participação é opcional, mas requer a formalização junto à instituição de ensino; É necessário firmar um Termo de Compromisso entre o estudante, a empresa concedente e a instituição; O cadastro do estágio é feito exclusivamente pelo sistema APC (SGA – PUC Carreiras – Sistema de Atividades e Práticas Curriculares); O período para a atividade de estágio deverá ser entre a data de início e término do curso de origem do aluno. Para mais orientações sobre o procedimento e os documentos necessários, acesse o sistema APC ou entre em contato com a coordenação de estágios da pós-graduação, através do e-mail praticasiec@pucminas.br Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC",
+   "titulo": "Estágio Não Obrigatório – Alunos da Pós-Graduação",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/897778"
+  },
+  "898341": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-10T22:35:55Z",
+   "texto": "www.youtube.com/c/PUCMinasPósgraduacão",
+   "titulo": "É HOJE (10/09/2026) - Jornada da Pós-graduação PUC Minas / 2s2026",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/898341"
+  },
+  "898617": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-11T21:55:03Z",
+   "texto": "https://www.youtube.com/watch?v=lEEiol30TSo&t=10s",
+   "titulo": "JORNADA PÓS GRADUAÇÃO - PERDEU A LIVE? ",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/898617"
+  },
+  "901142": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-21T21:33:51Z",
+   "texto": "Prezados(as) alunos(as), Gostaríamos de lembrar que os estudantes da PUC Minas têm acesso a uma série de cursos gratuitos oferecidos por parceiros acadêmicos, proporcionando oportunidades adicionais de capacitação e certificação em tecnologias amplamente utilizadas pelo mercado, como AWS, Google e Cisco. Essas iniciativas estão disponíveis por meio das parcerias do ICEI. As inscrições podem ser realizadas diretamente no portal do ICEI, acessando o menu Parcerias: 🔗 Portal do ICEI - Parcerias icei.pucminas.br Links to an external site. Para quem deseja aprofundar conhecimentos em Cibersegurança, recomendamos especialmente a Trilha de Formação de Analista de Cibersegurança Júnior da Cisco, apresentada no infográfico em anexo. A formação é composta por cinco cursos principais, incluindo o módulo Cybersecurity Essentials, que reúne conteúdos fundamentais para a área e serve como base para os demais cursos da trilha. Além disso, a Google Cloud realizará um treinamento gratuito e aberto ao público no dia 25 de setembro, intitulado \" Capacita+ : Construa com o Gemini\". 📅 Data: 25 de setembro 🕘 Horário: 9h30 às 11h30 💻 Formato: On-line e gratuito O evento abordará as principais tendências da chamada Era Agêntica, apresentando na prática como criar agentes de Inteligência Artificial utilizando tecnologias do Google Cloud. Os participantes terão acesso a demonstrações, conteúdos exclusivos e orientações para continuar seus estudos e projetos na área de IA. ▶️ Link para participação: ht…",
+   "titulo": "COMUNICADO! ",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901142"
+  },
+  "901145": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-21T21:37:31Z",
+   "texto": "Olá, pessoal! Começou no dia, 14/09, a 13ª Maratona de Cibereducação Cisco, uma excelente oportunidade para desenvolver conhecimentos em segurança digital e cibersegurança. A maratona acontecerá até 04/10 e é totalmente gratuita. Ao concluir o curso, os participantes recebem: ✅ Certificado de conclusão, que pode ser aproveitado como Atividade Complementar de Graduação (ACG); ✅ Distintivo digital (badge) para compartilhar no LinkedIn e outras redes sociais; ✅ Possibilidade de participar da 2ª etapa da Maratona, na qual serão oferecidos cursos gratuitos na área de Segurança Cibernética. A PUC Minas disponibilizou uma turma específica para participação: 🔗 Acesso à turma da PUC Minas: https://www.netacad.com/pt/courses/digital-safety-security?courseLang=pt-PT&instance_id=a05b8ae1-4865-4e55-a9bb-8000cd213d9f Links to an external site. 🔗 Mais informações sobre a Maratona Cisco: https://www.cisco.com/c/m/pt_br/brasil-digital-e-inclusivo/cibereducacao/aluno.html Links to an external site. Aproveitem a oportunidade para fortalecer seus conhecimentos em cibersegurança, enriquecer o currículo e conquistar uma certificação reconhecida pelo mercado. Bons estudos e sucesso a todos! Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC",
+   "titulo": "🚀 13ª Maratona de Cibereducação Cisco: inscrições abertas!",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901145"
+  },
+  "901489": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-22T21:29:54Z",
+   "texto": "Prezados(as) alunos(as), boa noite. Espero que estejam bem. Conforme comunicado pelo professor Victor Sales Silva , por motivos de saúde, a aula de hoje da disciplina Pipeline de Dados: Integração, Qualidade e Automação , prevista para ocorrer das 19h às 22h30 , precisou ser cancelada. Informo que a reposição da aula será alinhada pelo professor juntamente à coordenação do curso. Assim que houver a definição da nova data, a informação será divulgada. Além disso, em breve, publicarei no Espaço da Coordenação a grade horária atualizada para acompanhamento de todos. Agradeço pela compreensão e permaneço à disposição para quaisquer esclarecimentos. Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC",
+   "titulo": "CANCELAMENTO DA AULA DE HOJE - 22/09/2026",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901489"
+  },
+  "901988": {
+   "curso": "Espaço Coordenação",
+   "data": "2026-09-24T21:09:33Z",
+   "texto": "Prezados(as) alunos(as), boa noite. Espero que estejam bem. Conforme comunicado anteriormente, a aula da disciplina Pipeline de Dados: Integração, Qualidade e Automação , prevista para o dia 22/09/2026 , foi cancelada. Informo que a reposição já foi programada e será realizada, excepcionalmente, no dia 26/10/2026 (segunda-feira) . Peço, por gentileza, que se organizem para participar da aula na nova data. Aproveito para informar que a grade horária já foi atualizada e encontra-se disponível no Espaço da Coordenação para consulta. Em caso de dúvidas, permaneço à disposição. Abraços. Atenciosamente, GIOVANNA SOUZA BOTELHO | AUXILIAR ADMINISTRATIVO Núcleo de Gestão Acadêmica | Coordenação de Serviços Educacionais Instituto de Educação Continuada – IEC",
+   "titulo": "REPOSIÇÃO DA DISCIPLINA - Pipeline de Dados: Integração, Qualidade e Automação",
+   "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901988"
+  }
+ },
+ "paginas": {
+  "279167:apresentacao-da-disciplina": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/02 - APRESENTAÇÃO/Página - Apresentação da Disciplina.html",
+   "sha256": "c5b082a72edab7a8bf3efa43573eb8fd218ade28ce191dee3a8a91547858cfbe",
+   "titulo": "Apresentação da Disciplina"
+  },
+  "279167:lab-pratico-opcional-api-de-scoring-de-credito-com-lambda-api-gateway-dynamodb-e-bedrock": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página - Lab prático (opcional)_ API de Scoring de Crédito com Lambda, API Gateway, D.html",
+   "sha256": "2d52772c0644ccbc49e3beb41286c3d8353256448dc92232dbf8f39158ac989a",
+   "titulo": "Lab prático (opcional): API de Scoring de Crédito com Lambda, API Gateway, DynamoDB e Bedrock"
+  },
+  "279167:lab-pratico-opcional-construindo-um-data-lake-com-s3-glue-e-athena": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Lab prático (opcional)_ Construindo um Data Lake com S3, Glue e Athena.html",
+   "sha256": "15ebf9ebd67d0de6fc60833e87bf107c31d28e79707503fcd9dc0732dc90ab21",
+   "titulo": "Lab prático (opcional): Construindo um Data Lake com S3, Glue e Athena"
+  },
+  "279167:plano-de-ensino": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/02 - APRESENTAÇÃO/Página - Plano de Ensino.html",
+   "sha256": "7f464ad0491ca99d8ad24685a5c0739e050fc1c3994b3625591480b87a70cf66",
+   "titulo": "Plano de Ensino"
+  },
+  "279167:unidade-1-aula-01-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/04 - UNIDADE 1 - FUNDAMENTOS DE COMPUTAÇÃO EM NUVE/Página - Unidade 1 - aula 01 - Gravação da aula.html",
+   "sha256": "028cc487d95cd28e3559248466b1b0244f24b1ef9f9ef4be5588a39ea8ab2c00",
+   "titulo": "Unidade 1 - aula 01 - Gravação da aula"
+  },
+  "279167:unidade-1-aula-02-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/04 - UNIDADE 1 - FUNDAMENTOS DE COMPUTAÇÃO EM NUVE/Página -  Unidade 1 - aula 02 - Gravação da aula.html",
+   "sha256": "87e9d45f24cfdaa2cdb3793a1f7fa53d536dfd6e16d42f37721ec29d224f961c",
+   "titulo": " Unidade 1 - aula 02 - Gravação da aula"
+  },
+  "279167:unidade-1-material-complementar": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/04 - UNIDADE 1 - FUNDAMENTOS DE COMPUTAÇÃO EM NUVE/Página - Unidade 1 - Material Complementar.html",
+   "sha256": "dfabc8f8b6251e05f5c155d42e3cd5967e7d820bd2326a1e64dc2c74686820b7",
+   "titulo": "Unidade 1 - Material Complementar"
+  },
+  "279167:unidade-1-orientacoes-de-estudo": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/04 - UNIDADE 1 - FUNDAMENTOS DE COMPUTAÇÃO EM NUVE/Página - Unidade 1 - Orientações de Estudo.html",
+   "sha256": "49f0cc427514f5b122f76ec9191ea624e4ac50193eb26183b028fac7320e0ddc",
+   "titulo": "Unidade 1 - Orientações de Estudo"
+  },
+  "279167:unidade-2-aula-03-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - aula 03 - Gravação da aula.html",
+   "sha256": "2f2fc3eae941dae5515a4a02e0c51b1f4a5c7ff0c7fa0ba4ff7f6b1d877a4b90",
+   "titulo": "Unidade 2 - aula 03 - Gravação da aula"
+  },
+  "279167:unidade-2-aula-04-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - aula 04 - Gravação da aula.html",
+   "sha256": "99f818bc71c42941214862e055350896fcd21717409f0ce9e8afc688dda5bc99",
+   "titulo": "Unidade 2 - aula 04 - Gravação da aula"
+  },
+  "279167:unidade-2-material-complementar": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - Material Complementar.html",
+   "sha256": "ea9bb67ca11b5ecb83d4f72343517687e1c1448978ba85aa89ff5e5ccf74130e",
+   "titulo": "Unidade 2 - Material Complementar"
+  },
+  "279167:unidade-2-orientacoes-de-estudo": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/05 - UNIDADE 2 - Dados, Analytics e Infraestrutura/Página - Unidade 2 - Orientações de Estudo.html",
+   "sha256": "e1dcdc2f1d28d791d46636805755e844213ddc396a27aa09f66d0f80cb5b6b2a",
+   "titulo": "Unidade 2 - Orientações de Estudo"
+  },
+  "279167:unidade-3-aula-05-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página -  Unidade 3 - aula 05 - Gravação da aula.html",
+   "sha256": "9219276baa26c783119b688b67fa7173881fe7937634b3a7092e3636bc81857b",
+   "titulo": " Unidade 3 - aula 05 - Gravação da aula"
+  },
+  "279167:unidade-3-aula-06-gravacao-da-aula": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página -  Unidade 3 - aula 06 - Gravação da aula.html",
+   "sha256": "b203d50937a6a9b16c2c1b402a41683d5c53ec93c1838905ab4f4733289fd158",
+   "titulo": " Unidade 3 - aula 06 - Gravação da aula"
+  },
+  "279167:unidade-3-material-complementar": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página - Unidade 3 - Material Complementar.html",
+   "sha256": "b76fabdb42beeadfcc961b96258e995a23c32ed29b7935f1ed40cb994d887f26",
+   "titulo": "Unidade 3 - Material Complementar"
+  },
+  "279167:unidade-3-orientacoes-de-estudo": {
+   "caminho": "disciplinas/02_cloud_computing/00_original/canvas/06 - UNIDADE 3 - Inteligência Artificial, Agentes/Página - Unidade 3 - Orientações de Estudo.html",
+   "sha256": "79a1430c3c86f485b96765c547d28fb13eea4af161502ba981fcdd3d04c4c1db",
+   "titulo": "Unidade 3 - Orientações de Estudo"
+  },
+  "279168:1-orientacoes-de-estudo": {
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Página - 1 - Orientações de Estudo.html",
+   "sha256": "9ba33a1725974f44a7e209bfb5867962127ab60474e824ae129212a13ad12bfd",
+   "titulo": "1 - Orientações de Estudo"
+  },
+  "279168:referencias-bibliograficas-2": {
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/02 - Apresentação da disciplina/Página - Referências Bibliográficas.html",
+   "sha256": "e20094ae9ad01f4d3c6360183c588ae86bb3378a5be2ead0793fa6cffeaaf3d7",
+   "titulo": "Referências Bibliográficas"
+  },
+  "279171:apresentacao-da-disciplina": {
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/02 - APRESENTAÇÃO/Página - Apresentação da Disciplina.html",
+   "sha256": "901ebc9bc4c0889f7a8064f3f4e57a61e09c755b8526ba56ae4bdf56d96612da",
+   "titulo": "Apresentação da Disciplina"
+  },
+  "279171:plano-de-ensino": {
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/02 - APRESENTAÇÃO/Página - Plano de Ensino.html",
+   "sha256": "ea857e7727c38e192186ae3749f24851bc6726a167cd2817e6264ee3c372a000",
+   "titulo": "Plano de Ensino"
+  }
+ }
+}

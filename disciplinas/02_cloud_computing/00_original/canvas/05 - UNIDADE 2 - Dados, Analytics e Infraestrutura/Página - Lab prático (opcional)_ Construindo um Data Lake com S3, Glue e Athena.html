@@ -1,0 +1,334 @@
+<!-- Origem: https://pucminas.instructure.com/courses/279167/pages/lab-pratico-opcional-construindo-um-data-lake-com-s3-glue-e-athena | atualizada no Canvas em 2026-10-03T03:47:57Z | capturada por puc-sync em 2026-11-15T18:39:58.812669-03:00 -->
+<meta charset="utf-8"><h1>Lab prático (opcional): Construindo um Data Lake com S3, Glue e Athena</h1>
+<h1><span>Lab prático (opcional): Construindo um Data Lake com S3, Glue e Athena</span></h1>
+<p><span>Pessoal,</span></p>
+<p><span>Durante a aula, construímos na prática um pequeno pipeline de </span><strong><span>Data Engineering utilizando serviços da AWS</span></strong><span>.</span></p>
+<p><span>Neste laboratório, vocês poderão reproduzir a prática utilizando o ambiente </span><strong><span>AWS Academy Data Engineering Sandbox</span></strong><span>.</span></p>
+<p><span>A ideia é trabalhar com um arquivo CSV, armazená-lo no Amazon S3, catalogar os dados utilizando o AWS Glue, realizar consultas com o Amazon Athena e, posteriormente, transformar os dados para o formato Parquet utilizando um Glue Job.</span></p>
+<h3><span>Fluxo da prática</span></h3>
+<p><strong><span>CSV → S3 / RAW → Glue Crawler → Glue Data Catalog → Athena → Glue Job → S3 / TRUSTED (Parquet) → Glue Crawler → Glue Data Catalog → Athena</span></strong></p>
+<p><span>Ao final, teremos duas camadas principais de dados:</span></p>
+<ul>
+<li>
+<p><strong><span>RAW:</span></strong><span> dados originais em CSV;</span></p>
+</li>
+<li>
+<p><strong><span>TRUSTED:</span></strong><span> dados transformados para Parquet e compactados com Snappy.</span></p>
+</li>
+</ul>
+<div><hr></div>
+<h1><span>1. Acessar o AWS Academy Sandbox</span></h1>
+<p><span>Acesse o curso:</span></p>
+<p><strong><span>AWS Academy Data Engineering</span></strong></p>
+<p><a href="https://awsacademy.instructure.com/courses/190890/modules"><span>https://awsacademy.instructure.com/courses/190890</span></a></p>
+<p><span>Dentro do curso, acesse:</span></p>
+<p><strong><span>Sandbox environment</span></strong></p>
+<p><a href="https://awsacademy.instructure.com/courses/190890/modules/items/18883313"><span>https://awsacademy.instructure.com/courses/190890/modules/items/18883313</span></a></p>
+<p><span>Clique em </span><strong><span>Start Lab</span></strong><span> e, quando o ambiente estiver disponível, abra o </span><strong><span>AWS Management Console</span></strong><span>.</span></p>
+<blockquote>
+<p><span>Utilize o ambiente disponibilizado pelo AWS Academy para realizar toda a prática. Não é necessário utilizar uma conta AWS pessoal.</span></p>
+</blockquote>
+<div><hr></div>
+<h1><span>2. Criar o bucket no Amazon S3</span></h1>
+<p><span>Acesse o </span><strong><span>Amazon S3</span></strong><span> e crie </span><strong><span>um único bucket</span></strong><span> para o laboratório.</span></p>
+<p><span>Utilize um nome semelhante a:</span></p>
+<pre><code><span>lake-SEUNOME</span></code></pre>
+<blockquote>
+<p><span>O nome do bucket precisa ser globalmente único. Substitua </span><code><span>SEUNOME</span></code><span> por alguma identificação.</span></p>
+</blockquote>
+<p><span>Dentro desse bucket, crie as seguintes pastas:</span></p>
+<pre><code><span>raw/
+trusted/
+athena-results/</span></code></pre>
+<p><span>A estrutura inicial deverá ficar:</span></p>
+<pre><code><span>lake-SEUNOME/
+├── raw/
+├── trusted/
+└── athena-results/</span></code></pre>
+<p><span>Dentro da pasta </span><code><span>raw/</span></code><span>, crie:</span></p>
+<pre><code><span>raw/customers/</span></code></pre>
+<p><span>Faça o upload do arquivo </span><strong><span>customers.csv</span></strong><span> nessa pasta.</span></p>
+<p><span>A estrutura deverá ficar:</span></p>
+<pre><code><span>lake-SEUNOME/
+├── raw/
+│   └── customers/
+│       └── customers.csv
+├── trusted/
+└── athena-results/</span></code></pre>
+<div><hr></div>
+<h1><span>3. Criar o banco no AWS Glue Data Catalog</span></h1>
+<p><span>Acesse:</span></p>
+<p><strong><span>AWS Glue → Data Catalog → Databases</span></strong></p>
+<p><span>Crie um banco chamado:</span></p>
+<pre><code><span>lab_lake</span></code></pre>
+<p><span>Esse banco será utilizado para armazenar os metadados das tabelas utilizadas durante o laboratório.</span></p>
+<div><hr></div>
+<h1><span>4. Criar o Crawler dos dados RAW</span></h1>
+<p><span>Agora vamos utilizar o </span><strong><span>AWS Glue Crawler</span></strong><span> para analisar o arquivo CSV e criar automaticamente uma tabela no Glue Data Catalog.</span></p>
+<p><span>Acesse:</span></p>
+<p><strong><span>AWS Glue → Crawlers → Create crawler</span></strong></p>
+<p><span>Configure o Crawler:</span></p>
+<p><strong><span>Nome:</span></strong></p>
+<pre><code><span>crawler_customers_raw</span></code></pre>
+<p><strong><span>Fonte dos dados:</span></strong><span> Amazon S3</span></p>
+<p><strong><span>S3 path:</span></strong></p>
+<pre><code><span>s3://lake-SEUNOME/raw/customers/</span></code></pre>
+<p><span>Selecione ou crie uma </span><strong><span>IAM Role</span></strong><span> com as permissões necessárias para que o Glue consiga acessar os dados no S3.</span></p>
+<p><span>Configure como banco de destino:</span></p>
+<pre><code><span>lab_lake</span></code></pre>
+<p><span>Utilize o prefixo:</span></p>
+<pre><code><span>raw_</span></code></pre>
+<p><span>Finalize a criação e execute o Crawler.</span></p>
+<p><span>Aguarde até que a execução seja concluída.</span></p>
+<div><hr></div>
+<h1><span>5. Verificar o Glue Data Catalog</span></h1>
+<p><span>Depois da execução do Crawler, acesse:</span></p>
+<p><strong><span>AWS Glue → Data Catalog → Tables</span></strong></p>
+<p><span>Deverá aparecer uma tabela semelhante a:</span></p>
+<pre><code><span>raw_customers</span></code></pre>
+<p><span>O Crawler deverá identificar automaticamente a estrutura do arquivo CSV.</span></p>
+<p><span>O arquivo utilizado nesta prática possui as seguintes colunas:</span></p>
+<ul>
+<li>
+<p><code><span>customer_id</span></code></p>
+</li>
+<li>
+<p><code><span>first_name</span></code></p>
+</li>
+<li>
+<p><code><span>last_name</span></code></p>
+</li>
+<li>
+<p><code><span>company</span></code></p>
+</li>
+<li>
+<p><code><span>country</span></code></p>
+</li>
+<li>
+<p><code><span>category</span></code></p>
+</li>
+<li>
+<p><code><span>purchase_value</span></code></p>
+</li>
+<li>
+<p><code><span>quantity</span></code></p>
+</li>
+<li>
+<p><code><span>subscription_date</span></code></p>
+</li>
+<li>
+<p><code><span>email</span></code></p>
+</li>
+<li>
+<p><code><span>status</span></code></p>
+</li>
+</ul>
+<p><span>Verifique também se a localização da tabela aponta para:</span></p>
+<pre><code><span>s3://lake-SEUNOME/raw/customers/</span></code></pre>
+<div><hr></div>
+<h1><span>6. Configurar o Amazon Athena</span></h1>
+<p><span>Agora vamos utilizar o </span><strong><span>Amazon Athena</span></strong><span> para consultar os dados diretamente no S3.</span></p>
+<p><span>Acesse:</span></p>
+<p><strong><span>Amazon Athena</span></strong></p>
+<p><span>Na primeira utilização, será necessário configurar o local onde os resultados das consultas serão armazenados.</span></p>
+<p><span>Utilize a pasta criada anteriormente:</span></p>
+<pre><code><span>s3://lake-SEUNOME/athena-results/</span></code></pre>
+<div><hr></div>
+<h1><span>7. Consultar os dados RAW no Athena</span></h1>
+<p><span>Com a tabela </span><code><span>raw_customers</span></code><span> disponível no Glue Data Catalog, podemos realizar consultas utilizando o Athena.</span></p>
+<h3><span>Consulta 1 — Visualizar os primeiros registros</span></h3>
+<pre><code><span>SELECT *
+FROM raw_customers
+LIMIT 10;</span></code></pre>
+<p><span>Observe os registros retornados pelo Athena.</span></p>
+<h3><span>Consulta 2 — Analisar vendas por país</span></h3>
+<pre><code><span>SELECT country,
+       COUNT(*) AS clientes,
+       SUM(purchase_value) AS total_vendas,
+       AVG(purchase_value) AS ticket_medio
+FROM raw_customers
+GROUP BY country
+ORDER BY total_vendas DESC;</span></code></pre>
+<p><span>Essa consulta apresenta:</span></p>
+<ul>
+<li>
+<p><span>quantidade de clientes por país;</span></p>
+</li>
+<li>
+<p><span>valor total das vendas;</span></p>
+</li>
+<li>
+<p><span>ticket médio.</span></p>
+</li>
+</ul>
+<h3><span>Consulta 3 — Analisar vendas por categoria e status</span></h3>
+<pre><code><span>SELECT category,
+       status,
+       SUM(purchase_value) AS total
+FROM raw_customers
+GROUP BY category, status
+ORDER BY total DESC;</span></code></pre>
+<p><span>Observe os resultados e também a quantidade de dados escaneados pelo Athena.</span></p>
+<div><hr></div>
+<h1><span>8. Criar o Glue Job para transformar os dados</span></h1>
+<p><span>Agora vamos transformar os dados da camada </span><strong><span>RAW</span></strong><span> para a camada </span><strong><span>TRUSTED</span></strong><span>.</span></p>
+<p><span>Acesse:</span></p>
+<p><strong><span>AWS Glue → ETL jobs → Jobs → Create job</span></strong></p>
+<p><span>Escolha:</span></p>
+<p><strong><span>Visual with a source and target</span></strong></p>
+<h3><span>Source</span></h3>
+<p><span>Configure a origem utilizando o </span><strong><span>Glue Data Catalog</span></strong><span>:</span></p>
+<ul>
+<li>
+<p><strong><span>Database:</span></strong> <code><span>lab_lake</span></code></p>
+</li>
+<li>
+<p><strong><span>Table:</span></strong> <code><span>raw_customers</span></code></p>
+</li>
+</ul>
+<h3><span>Transform</span></h3>
+<p><span>Adicione uma transformação:</span></p>
+<p><strong><span>Change Schema</span></strong></p>
+<p><span>Neste exercício, mantenha as colunas existentes.</span></p>
+<h3><span>Target</span></h3>
+<p><span>Configure o destino:</span></p>
+<p><strong><span>Format:</span></strong></p>
+<pre><code><span>Parquet</span></code></pre>
+<p><strong><span>Compression:</span></strong></p>
+<pre><code><span>Snappy</span></code></pre>
+<p><strong><span>S3 Path:</span></strong></p>
+<pre><code><span>s3://lake-SEUNOME/trusted/customers/</span></code></pre>
+<p><strong><span>Database:</span></strong></p>
+<pre><code><span>lab_lake</span></code></pre>
+<p><strong><span>Table name:</span></strong></p>
+<pre><code><span>trusted_customers</span></code></pre>
+<p><span>Salve o Job e execute.</span></p>
+<p><span>Aguarde até que o status seja:</span></p>
+<pre><code><span>Succeeded</span></code></pre>
+<p><span>Após a execução, os dados transformados deverão estar armazenados no mesmo bucket, agora na camada </span><code><span>trusted/</span></code><span>.</span></p>
+<p><span>A estrutura deverá ficar semelhante a:</span></p>
+<pre><code><span>lake-SEUNOME/
+├── raw/
+│   └── customers/
+│       └── customers.csv
+├── trusted/
+│   └── customers/
+│       └── arquivos Parquet
+└── athena-results/</span></code></pre>
+<div><hr></div>
+<h1><span>9. Criar o Crawler da camada TRUSTED</span></h1>
+<p><span>Agora precisamos atualizar o Glue Data Catalog para reconhecer os dados transformados.</span></p>
+<p><span>Crie um novo Crawler:</span></p>
+<p><strong><span>Nome:</span></strong></p>
+<pre><code><span>crawler_customers_trusted</span></code></pre>
+<p><strong><span>Data source:</span></strong><span> Amazon S3</span></p>
+<p><strong><span>S3 path:</span></strong></p>
+<pre><code><span>s3://lake-SEUNOME/trusted/customers/</span></code></pre>
+<p><strong><span>Database:</span></strong></p>
+<pre><code><span>lab_lake</span></code></pre>
+<p><strong><span>Table prefix:</span></strong></p>
+<pre><code><span>trusted_</span></code></pre>
+<p><span>Execute o Crawler e aguarde a conclusão.</span></p>
+<p><span>No Glue Data Catalog deverá aparecer:</span></p>
+<pre><code><span>trusted_customers</span></code></pre>
+<p><span>Abra a tabela e verifique que a classificação dos dados é:</span></p>
+<pre><code><span>Parquet</span></code></pre>
+<div><hr></div>
+<h1><span>10. Consultar os dados TRUSTED no Athena</span></h1>
+<p><span>Agora vamos realizar novas consultas utilizando a tabela </span><code><span>trusted_customers</span></code><span>.</span></p>
+<h3><span>Consulta 1 — Visualizar os registros</span></h3>
+<pre><code><span>SELECT *
+FROM trusted_customers
+LIMIT 10;</span></code></pre>
+<h3><span>Consulta 2 — Clientes por país</span></h3>
+<pre><code><span>SELECT country,
+       COUNT(*) AS total_clientes
+FROM trusted_customers
+GROUP BY country
+ORDER BY total_clientes DESC;</span></code></pre>
+<h3><span>Consulta 3 — Clientes por ano de assinatura</span></h3>
+<pre><code><span>SELECT SUBSTRING(subscription_date, 1, 4) AS ano,
+       COUNT(*) AS total
+FROM trusted_customers
+GROUP BY SUBSTRING(subscription_date, 1, 4)
+ORDER BY ano;</span></code></pre>
+<h3><span>Consulta 4 — Clientes da China</span></h3>
+<pre><code><span>SELECT first_name,
+       last_name,
+       company,
+       email
+FROM trusted_customers
+WHERE country = 'China'
+ORDER BY last_name;</span></code></pre>
+<div><hr></div>
+<h1><span>11. Comparar RAW e TRUSTED</span></h1>
+<p><span>Agora compare as consultas realizadas sobre as duas camadas:</span></p>
+<p><strong><span>RAW</span></strong></p>
+<pre><code><span>CSV</span></code></pre>
+<p><span>versus</span></p>
+<p><strong><span>TRUSTED</span></strong></p>
+<pre><code><span>Parquet + Snappy</span></code></pre>
+<p><span>Observe principalmente a quantidade de dados escaneados pelo Athena.</span></p>
+<p><span>Com apenas 1.000 registros, a diferença pode ser pequena. Porém, em ambientes reais, com milhões ou bilhões de registros, formatos colunares como o </span><strong><span>Parquet</span></strong><span> podem reduzir significativamente a quantidade de dados processados.</span></p>
+<p><span>Esse é um dos motivos pelos quais formatos como Parquet são muito utilizados em arquiteturas de </span><strong><span>Data Lake e Data Engineering</span></strong><span>.</span></p>
+<div><hr></div>
+<h1><span>O que você deve aprender com a prática</span></h1>
+<p><span>Ao finalizar o laboratório, você deverá conseguir explicar:</span></p>
+<ul>
+<li>
+<p><span>Qual é a função do Amazon S3 no Data Lake;</span></p>
+</li>
+<li>
+<p><span>O que representa a camada RAW;</span></p>
+</li>
+<li>
+<p><span>O que representa a camada TRUSTED;</span></p>
+</li>
+<li>
+<p><span>Qual é a função do AWS Glue Crawler;</span></p>
+</li>
+<li>
+<p><span>O que é o Glue Data Catalog;</span></p>
+</li>
+<li>
+<p><span>Como o Athena consulta dados armazenados no S3;</span></p>
+</li>
+<li>
+<p><span>Qual é a função de um Glue Job;</span></p>
+</li>
+<li>
+<p><span>Por que utilizar Parquet;</span></p>
+</li>
+<li>
+<p><span>O que é a compressão Snappy;</span></p>
+</li>
+<li>
+<p><span>Por que transformar os dados antes de realizar análises;</span></p>
+</li>
+<li>
+<p><span>Como diferentes serviços AWS podem ser combinados para construir um pipeline de Data Engineering.</span></p>
+</li>
+</ul>
+<div><hr></div>
+<h2><span>Estrutura final do laboratório</span></h2>
+<p><span>Ao final da prática, o bucket deverá possuir uma estrutura semelhante a:</span></p>
+<pre><code><span>lake-SEUNOME/
+│
+├── raw/
+│   └── customers/
+│       └── customers.csv
+│
+├── trusted/
+│   └── customers/
+│       └── arquivos Parquet
+│
+└── athena-results/
+    └── resultados das consultas</span></code></pre>
+<p><strong><span>Fluxo completo:</span></strong></p>
+<p><strong><span>S3 / RAW → Glue Crawler → Glue Data Catalog → Athena → Glue Job → S3 / TRUSTED (Parquet) → Glue Crawler → Glue Data Catalog → Athena</span></strong></p>
+<div><hr></div>
+<h3><span>Importante</span></h3>
+<p><span>Esta atividade é </span><strong><span>opcional e não vale nota</span></strong><span>.</span></p>
+<p><span>O objetivo é permitir que vocês reproduzam, individualmente, a prática realizada durante a aula e tenham contato direto com os serviços de </span><strong><span>Data Engineering da AWS</span></strong><span>.</span></p>
+<p><span>Ao finalizar a atividade, encerrem o ambiente do </span><strong><span>AWS Academy Sandbox</span></strong><span> conforme as orientações disponibilizadas no laboratório.</span></p>
+<p><span>Bom laboratório!</span></p>
