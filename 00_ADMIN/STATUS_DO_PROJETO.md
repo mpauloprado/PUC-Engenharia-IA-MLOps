@@ -17,6 +17,16 @@ Fase 2 — Ingestão, classificação e criação de mapa de conhecimento por di
 
 > Entradas mais recentes no topo. Veja `.claude/rules/multiplas-maquinas.md`.
 
+### 2026-11-15 (noite) — Kali (Claude Code, terminal)
+- E-mail PUC (M365): leitura via Microsoft Graph **bloqueada** (exige aprovação do administrador). Pedido de aprovação enviado pelo aluno; aguardando. Encaminhamento para Gmail não testado.
+- Triagem forense do material de Kubernetes e Orquestração (32 arquivos): nenhum indício suspeito (`00_ADMIN/RELATORIOS_FORENSES/2026-11-15_lote_canvas_docker_orquestracao.md`). 39 itens marcados `[x]` em `NOVIDADES.md`.
+- Baixado o PDF da Atividade 01 de Orquestração (estava só linkado na descrição da atividade).
+- Enunciados transcritos com checklist: `03_kubernetes/03_atividades/enunciado/ENUNCIADOS_UNIDADE1_DOCKER.md` e `06_orquestracao_workflows/03_atividades/enunciado/ATIVIDADE_01_AIRFLOW.md`.
+- Resumo de revisão + autoteste: `03_kubernetes/05_revisao/RESUMO_UNIDADE1_DOCKER.md`.
+- Painel de acompanhamento: `tools/painel/` → `00_ADMIN/painel/painel.html`.
+- Ambiente: Docker **não instalado** no Kali; Docker Desktop instalado no Windows, mas parado.
+- Próximos passos: estudar para o Teste de Fixação (24/11); Atividade 01 Airflow (25/11); trabalho prático Docker Compose (01/12); decidir onde rodar Docker.
+
 ### 2026-11-15 — Kali (Claude Code, terminal)
 - Projeto versionado no Git e publicado no GitHub privado (`mpauloprado/PUC-Engenharia-IA-MLOps`).
 - Windows: repositório Git em `C:\git\` (fora do Google Drive); `core.longpaths` ativado.

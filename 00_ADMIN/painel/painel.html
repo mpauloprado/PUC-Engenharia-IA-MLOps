@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="900">
+<title>Painel PUC · IA & MLOps</title>
+<style>
+:root{
+  --bg:#f4f5f8; --panel:#ffffff; --panel2:#f9fafc; --line:#e4e7ee; --ink:#141824; --ink2:#5b6275; --ink3:#8a91a3;
+  --brand:#4f46e5; --brand-soft:#eef0ff;
+  --red:#dc2626; --red-soft:#fdecec; --amber:#d97706; --amber-soft:#fdf3e2;
+  --green:#059669; --green-soft:#e5f6ef; --blue:#2563eb; --blue-soft:#e8effd;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 16px rgba(16,24,40,.06);
+  --r:14px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0d1017; --panel:#151a24; --panel2:#1a202c; --line:#262d3b; --ink:#e8ebf2; --ink2:#a3abbd; --ink3:#6f788c;
+  --brand:#8b85ff; --brand-soft:#23234a;
+  --red:#f87171; --red-soft:#3a1d22; --amber:#fbbf24; --amber-soft:#3a2f17;
+  --green:#34d399; --green-soft:#16332a; --blue:#60a5fa; --blue-soft:#172a45;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25); color-scheme:dark;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:28px 20px 48px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:22px}
+h1{font-size:22px;letter-spacing:-.02em;margin:0;display:flex;align-items:center;gap:10px}
+.logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--brand),#06b6d4);display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px}
+.sub{color:var(--ink2);font-size:13px;margin-top:4px}
+.clock{font-variant-numeric:tabular-nums;color:var(--ink2);font-size:13px;text-align:right}
+.clock b{display:block;color:var(--ink);font-size:20px;font-weight:650;letter-spacing:-.01em}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.kpi{padding:16px 18px;position:relative;overflow:hidden}
+.kpi .lbl{color:var(--ink2);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.kpi .val{font-size:30px;font-weight:720;letter-spacing:-.03em;margin-top:6px;font-variant-numeric:tabular-nums}
+.kpi .hint{color:var(--ink3);font-size:12.5px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi.hero{background:linear-gradient(135deg,var(--brand),#3b82f6 70%,#06b6d4);color:#fff;border:0}
+.kpi.hero .lbl,.kpi.hero .hint{color:rgba(255,255,255,.85)}
+.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:18px;align-items:start}
+.sec{padding:18px 18px 8px}
+.sec h2{font-size:15px;margin:0 0 4px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sec h2 small{color:var(--ink3);font-weight:500;font-size:12px}
+.toggle{font:inherit;font-size:12px;color:var(--ink2);background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:4px 10px;cursor:pointer}
+.toggle:hover{color:var(--ink)}
+.list{margin:10px -18px 0}
+.item{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 18px;border-top:1px solid var(--line)}
+.item:hover{background:var(--panel2)}
+.date{text-align:center;border-radius:10px;padding:6px 0;background:var(--panel2);border:1px solid var(--line)}
+.date .d{font-size:19px;font-weight:720;line-height:1.1}
+.date .m{font-size:11px;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em}
+.title{font-weight:620;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{color:var(--ink2);font-size:12.5px;display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:2px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:650;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.t-red{background:var(--red-soft);color:var(--red)} .t-amber{background:var(--amber-soft);color:var(--amber)}
+.t-green{background:var(--green-soft);color:var(--green)} .t-blue{background:var(--blue-soft);color:var(--blue)}
+.t-gray{background:var(--panel2);color:var(--ink3);border:1px solid var(--line)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pulse{animation:p 1.6s ease-in-out infinite}@keyframes p{50%{opacity:.35}}
+.prog{display:flex;align-items:center;gap:8px;margin-top:7px;font-size:12px;color:var(--ink2)}
+.bar{flex:1;max-width:260px;height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--brand),#06b6d4)}
+.done .title{color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--line)}
+.done .date{opacity:.55}
+.disc{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:11px 18px;border-top:1px solid var(--line)}
+.disc .n{font-weight:600}
+.num{font-variant-numeric:tabular-nums;color:var(--ink2);font-size:12.5px}
+.aviso{padding:11px 18px;border-top:1px solid var(--line);display:block}
+.aviso:hover{background:var(--panel2)}
+.aviso .title{font-weight:560;font-size:13.5px}
+.sys{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:11px 18px;border-top:1px solid var(--line)}
+.side{display:grid;gap:18px;min-width:0}
+.side .sec{min-width:0;overflow:hidden}
+.foot{color:var(--ink3);font-size:12px;margin-top:22px;text-align:center}
+.empty{padding:14px 18px;color:var(--ink3);border-top:1px solid var(--line)}
+@media (max-width:980px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.kpis{grid-template-columns:1fr}.item{grid-template-columns:52px minmax(0,1fr)}.item .tag.right{grid-column:2;justify-self:start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1><span class="logo">IA</span>Painel · Engenharia de IA &amp; MLOps</h1>
+      <div class="sub" id="sub">PUC Minas · Oferta 1</div>
+    </div>
+    <div class="clock"><b id="hora">--:--</b><span id="dia"></span></div>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="grid">
+    <section class="card sec">
+      <h2>Entregas <span><button class="toggle" id="tg">Mostrar entregues</button></span></h2>
+      <div class="list" id="ativs"></div>
+    </section>
+    <div class="side">
+      <section class="card sec"><h2>Disciplinas <small>materiais · a inspecionar</small></h2><div class="list" id="discs"></div></section>
+      <section class="card sec"><h2>Avisos recentes</h2><div class="list" id="avisos"></div></section>
+      <section class="card sec"><h2>Manutenção</h2><div class="list" id="sys"></div></section>
+    </div>
+  </div>
+  <div class="foot">Dados: Canvas via puc-sync <code>[CANVAS]</code> · progresso: checklists em <code>03_atividades/enunciado/</code> · a página recarrega a cada 15 min</div>
+</div>
+
+<script>
+const D = {"atividades": [{"disciplina": "Pipeline de Dados", "encerrada": false, "entregue": true, "nome": "Exercício 1 - Arquiteturas e fundamentos de pipelines de dados", "prazo": "2026-09-22T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279166/assignments/1442224"}, {"disciplina": "Cloud Computing", "encerrada": false, "entregue": true, "nome": "Atividade Avaliativa 1", "prazo": "2026-10-04T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279167/assignments/1449178"}, {"disciplina": "Cloud Computing", "encerrada": false, "entregue": true, "nome": "Atividade Avaliativa 2", "prazo": "2026-10-25T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279167/assignments/1454889"}, {"disciplina": "Pipeline de Dados", "encerrada": false, "entregue": true, "nome": "Exercício 5 - Feature engineering e feature store", "prazo": "2026-10-27T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279166/assignments/1462226"}, {"disciplina": "Cloud Computing", "encerrada": false, "entregue": true, "nome": "Atividade Avaliativa Final", "prazo": "2026-11-04T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279167/assignments/1461215"}, {"disciplina": "Kubernetes", "encerrada": false, "entregue": false, "nome": "Teste Fixação unidade 1 Docker", "prazo": "2026-11-24T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279168/assignments/1469916"}, {"checklist": {"arquivo": "disciplinas/06_orquestracao_workflows/03_atividades/enunciado/ATIVIDADE_01_AIRFLOW.md", "feitos": 0, "opc_feitos": 0, "opc_total": 3, "total": 12}, "disciplina": "Orquestração de Workflows", "encerrada": false, "entregue": false, "nome": "Atividade 01", "prazo": "2026-11-25T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279171/assignments/1472100"}, {"checklist": {"arquivo": "disciplinas/03_kubernetes/03_atividades/enunciado/ENUNCIADOS_UNIDADE1_DOCKER.md", "feitos": 0, "opc_feitos": 0, "opc_total": 0, "total": 10}, "disciplina": "Kubernetes", "encerrada": false, "entregue": false, "nome": "Trabalho prático Unidade 1 Docker", "prazo": "2026-12-01T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279168/assignments/1457600"}, {"disciplina": "Kubernetes", "encerrada": false, "entregue": false, "nome": "Trabalho prático Unidade 2 Kubernetes", "prazo": "2026-12-24T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279168/assignments/1457602"}, {"disciplina": "Kubernetes", "encerrada": false, "entregue": false, "nome": "Trabalho em Grupo Unidade II - Kubernetes", "prazo": "2026-12-24T23:59:00-03:00", "url": "https://pucminas.instructure.com/courses/279168/assignments/1457603"}], "avisos": [{"curso": "Coordenação", "data": "2026-09-24T21:09:33Z", "titulo": "REPOSIÇÃO DA DISCIPLINA - Pipeline de Dados: Integração, Qualidade e Automação", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901988"}, {"curso": "Coordenação", "data": "2026-09-22T21:29:54Z", "titulo": "CANCELAMENTO DA AULA DE HOJE - 22/09/2026", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901489"}, {"curso": "Coordenação", "data": "2026-09-21T21:37:31Z", "titulo": "🚀 13ª Maratona de Cibereducação Cisco: inscrições abertas!", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901145"}, {"curso": "Coordenação", "data": "2026-09-21T21:33:51Z", "titulo": "COMUNICADO! ", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/901142"}, {"curso": "Coordenação", "data": "2026-09-11T21:55:03Z", "titulo": "JORNADA PÓS GRADUAÇÃO - PERDEU A LIVE? ", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/898617"}, {"curso": "Coordenação", "data": "2026-09-10T22:35:55Z", "titulo": "É HOJE (10/09/2026) - Jornada da Pós-graduação PUC Minas / 2s2026", "url": "https://pucminas.instructure.com/courses/279179/discussion_topics/898341"}], "materiais": {"Cloud Computing": 7, "Coordenação": 11, "Kubernetes": 25, "Orquestração de Workflows": 8, "Pipeline de Dados": 66}, "novidades_ok": {"Kubernetes": 31, "Orquestração de Workflows": 8}, "novidades_pend": {"Cloud Computing": 20, "Coordenação": 10, "Kubernetes": 2, "Pipeline de Dados": 4}, "paginas": 20, "sistema": {"canvas_token": "2026-12-15", "gdrive": "2026-11-22"}, "ultima_novidade": "2026-11-15T18:39:00-03:00"};
+const $ = id => document.getElementById(id);
+const MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let mostrarEntregues = false;
+
+function faltam(iso){
+  const ms = new Date(iso) - Date.now();
+  const dias = ms / 864e5;
+  return {ms, dias};
+}
+function fmtFalta(ms){
+  if (ms <= 0) return "encerrado";
+  const h = ms/36e5, d = Math.floor(h/24);
+  if (h < 24) return `${Math.floor(h)}h ${Math.floor((ms%36e5)/6e4)}min`;
+  return d === 1 ? "1 dia" : `${d} dias`;
+}
+function urg(a){
+  if (a.entregue) return ["t-green","entregue"];
+  const {ms, dias} = faltam(a.prazo);
+  if (ms <= 0) return ["t-gray","encerrado"];
+  if (dias <= 3) return ["t-red pulse-wrap", fmtFalta(ms)];
+  if (dias <= 7) return ["t-amber", fmtFalta(ms)];
+  return ["t-blue", fmtFalta(ms)];
+}
+function hora(iso){ const d=new Date(iso); return d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"}); }
+
+function renderKPIs(){
+  const pend = D.atividades.filter(a => !a.entregue && faltam(a.prazo).ms > 0).sort((a,b)=>a.prazo.localeCompare(b.prazo));
+  const ent = D.atividades.filter(a => a.entregue).length;
+  const prox = pend[0];
+  const naoInsp = Object.values(D.novidades_pend).reduce((s,v)=>s+v,0);
+  const sem = pend.filter(a => faltam(a.prazo).dias <= 7).length;
+  $("kpis").innerHTML = `
+    <div class="card kpi hero"><div class="lbl">Próxima entrega</div>
+      <div class="val" id="cd">${prox ? fmtFalta(faltam(prox.prazo).ms) : "—"}</div>
+      <div class="hint">${prox ? esc(prox.nome)+" · "+esc(prox.disciplina) : "nada pendente"}</div></div>
+    <div class="card kpi"><div class="lbl">Pendentes</div><div class="val">${pend.length}</div>
+      <div class="hint">${sem} nos próximos 7 dias</div></div>
+    <div class="card kpi"><div class="lbl">Entregues</div><div class="val">${ent}<span style="font-size:16px;color:var(--ink3)"> / ${D.atividades.length}</span></div>
+      <div class="hint">atividades com prazo no Canvas</div></div>
+    <div class="card kpi"><div class="lbl">A inspecionar</div><div class="val">${naoInsp}</div>
+      <div class="hint">itens novos do Canvas ainda não revisados</div></div>`;
+}
+
+function renderAtivs(){
+  const L = D.atividades.slice().sort((a,b)=>a.prazo.localeCompare(b.prazo))
+    .filter(a => mostrarEntregues || (!a.entregue && !a.encerrada));
+  $("tg").textContent = mostrarEntregues ? "Ocultar entregues" : "Mostrar entregues";
+  if (!L.length){ $("ativs").innerHTML = `<div class="empty">Nenhuma entrega pendente 🎉</div>`; return; }
+  $("ativs").innerHTML = L.map(a => {
+    const d = new Date(a.prazo); const [cls, txt] = urg(a);
+    const c = a.checklist;
+    const pct = c ? Math.round(100*c.feitos/c.total) : null;
+    const prog = c ? `<div class="prog"><div class="bar"><i style="width:${pct}%"></i></div>${c.feitos}/${c.total} requisitos${c.opc_total?` · opcionais ${c.opc_feitos}/${c.opc_total}`:""}</div>` : "";
+    const pulse = cls.includes("pulse-wrap");
+    return `<a class="item ${a.entregue?"done":""}" href="${esc(a.url)}" target="_blank" rel="noopener">
+      <div class="date"><div class="d">${d.getDate()}</div><div class="m">${MESES[d.getMonth()]}</div></div>
+      <div style="min-width:0"><div class="title">${esc(a.nome)}</div>
+        <div class="meta"><span>${esc(a.disciplina)}</span><span>até ${hora(a.prazo)}</span></div>${prog}</div>
+      <span class="tag right ${cls.replace(" pulse-wrap","")}"><span class="dot ${pulse?"pulse":""}"></span>${txt}</span></a>`;
+  }).join("");
+}
+
+function renderDiscs(){
+  const nomes = new Set([...Object.keys(D.materiais), ...Object.keys(D.novidades_pend)]);
+  const linhas = [...nomes].sort().map(n => {
+    const m = D.materiais[n] || 0, p = D.novidades_pend[n] || 0;
+    const pendAt = D.atividades.filter(a => a.disciplina===n && !a.entregue && faltam(a.prazo).ms>0).length;
+    return `<div class="disc"><div><div class="n">${esc(n)}</div><div class="num">${pendAt? pendAt+" entrega(s) pendente(s)" : "sem entregas pendentes"}</div></div>
+      <span class="num">${m} arq.</span>
+      ${p ? `<span class="tag t-amber">${p}</span>` : `<span class="tag t-green">✓</span>`}</div>`;
+  });
+  $("discs").innerHTML = linhas.join("") || `<div class="empty">Sem dados</div>`;
+}
+
+function renderAvisos(){
+  $("avisos").innerHTML = D.avisos.map(a => {
+    const d = new Date(a.data);
+    return `<a class="aviso" href="${esc(a.url)}" target="_blank" rel="noopener"><div class="title">${esc(a.titulo)}</div>
+      <div class="meta"><span>${esc(a.curso)}</span><span>${d.toLocaleDateString("pt-BR")}</span></div></a>`;
+  }).join("") || `<div class="empty">Nenhum aviso</div>`;
+}
+
+function renderSys(){
+  const s = D.sistema || {}, rows = [];
+  const row = (nome, iso, cmd, alerta) => {
+    const dias = Math.ceil((new Date(iso+"T23:59:00-03:00") - Date.now())/864e5);
+    const cls = dias <= 0 ? "t-red" : dias <= alerta ? "t-amber" : "t-green";
+    const txt = dias <= 0 ? "expirado" : `${dias} dia${dias>1?"s":""}`;
+    return `<div class="sys"><div><div class="n" style="font-weight:600">${nome}</div><div class="num">renovar: <code>${cmd}</code></div></div><span class="tag ${cls}">${txt}</span></div>`;
+  };
+  if (s.canvas_token) rows.push(row("Token do Canvas", s.canvas_token, "renovar-canvas-token", 5));
+  if (s.gdrive) rows.push(row("Autorização do Google Drive", s.gdrive, "renovar-gdrive", 2));
+  rows.push(`<div class="sys"><div><div class="n" style="font-weight:600">E-mail da PUC (Microsoft 365)</div><div class="num">aguardando aprovação do administrador</div></div><span class="tag t-gray">pendente</span></div>`);
+  $("sys").innerHTML = rows.join("");
+}
+
+function tick(){
+  const n = new Date();
+  $("hora").textContent = n.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+  $("dia").textContent = n.toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});
+  const pend = D.atividades.filter(a => !a.entregue && faltam(a.prazo).ms > 0).sort((a,b)=>a.prazo.localeCompare(b.prazo));
+  if (pend[0] && $("cd")) $("cd").textContent = fmtFalta(faltam(pend[0].prazo).ms);
+}
+
+function render(){
+  renderKPIs(); renderAtivs(); renderDiscs(); renderAvisos(); renderSys(); tick();
+  if (D.ultima_novidade) $("sub").textContent = "PUC Minas · Oferta 1 · última novidade do Canvas em " +
+    new Date(D.ultima_novidade).toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+}
+$("tg").onclick = () => { mostrarEntregues = !mostrarEntregues; renderAtivs(); };
+render(); setInterval(tick, 30000); setInterval(render, 5*60000);
+</script>
+</body>
+</html>
