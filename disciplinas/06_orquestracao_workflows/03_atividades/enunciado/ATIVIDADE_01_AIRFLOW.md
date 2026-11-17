@@ -53,11 +53,12 @@ Missão: pipeline no **Apache Airflow** que colete produtos da **FakeStore API**
 
 ## Status da implementação (16/11/2026)
 
-- Código: https://github.com/mpauloprado/shopbrasil-airflow (público, publicado em 17/11/2026); cópia local em `~/projetos/shopbrasil-airflow` no Kali.
+- Código: https://github.com/mpauloprado/shopbrasil-airflow (público, publicado em 17/11/2026). No projeto: submódulo em `../entrega/shopbrasil-airflow/` (rodar no Kali; no Windows só leitura, pois a pasta fica no Google Drive).
 - Base técnica igual ao lab da disciplina: Airflow 2.9.3, Python 3.11, provider Postgres 5.11.0, PostgreSQL 16.
 - Evidências de execução real no Kali (Docker 28.5.2):
   - 6 testes (pytest) passando: integridade do DAG, agendamento, topologia, retries, pool e operador.
   - Run completa com sucesso: 4 categorias mapeadas, snapshot em `metricas_categoria` (data_referencia 2026-11-16).
   - Idempotência: run agendada + run manual + clear da mesma run → snapshot com 4 linhas; histórico com 4 linhas por run, sem duplicar.
   - API fora do ar (`fakestore_base_url` inválida): 4 retries com intervalos crescentes (~52s, 72s, 182s, 331s), alertas `RETRY` e `FALHA` gravados em `alertas_pipeline`; tasks seguintes em `upstream_failed`, nada gravado.
+- Run agendada real em 17/11/2026 06:00: sucesso, 4 categorias gravadas (data_referencia 2026-11-17).
 - Pendente: postar o link do repositório na Atividade 01 do Canvas.

@@ -1,0 +1,3 @@
+[submodule "disciplinas/06_orquestracao_workflows/03_atividades/entrega/shopbrasil-airflow"]
+	path = disciplinas/06_orquestracao_workflows/03_atividades/entrega/shopbrasil-airflow
+	url = https://github.com/mpauloprado/shopbrasil-airflow.git
