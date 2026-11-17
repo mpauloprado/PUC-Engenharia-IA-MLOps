@@ -1,3 +1,6 @@
 [submodule "disciplinas/06_orquestracao_workflows/03_atividades/entrega/shopbrasil-airflow"]
 	path = disciplinas/06_orquestracao_workflows/03_atividades/entrega/shopbrasil-airflow
 	url = https://github.com/mpauloprado/shopbrasil-airflow.git
+[submodule "disciplinas/03_kubernetes/03_atividades/entrega/guess_game"]
+	path = disciplinas/03_kubernetes/03_atividades/entrega/guess_game
+	url = https://github.com/mpauloprado/guess_game.git
