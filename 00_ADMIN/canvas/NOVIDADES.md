@@ -4,6 +4,11 @@ Itens marcados `[ ]` ainda **não foram inspecionados**. Antes de usar um materi
 atividade, rodar `/inspect-document` e `/ingest-material` (regras do projeto) e marcar `[x]`.
 
 <!-- entradas -->
+### Sincronização de 18/11/2026 19:15
+
+- [ ] **ARQUIVO NOVO** — Orquestração de Workflows: `disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/Modulo 02 - Orquestração de Workflow.pdf` sha256 9610da08e0786b70…
+- [ ] **ARQUIVO NOVO** — Orquestração de Workflows: `disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/lab-airflow-Alunos.zip` sha256 c6b96ee247634a01…
+
 ### Sincronização de 15/11/2026 18:39
 
 - [ ] **ARQUIVO NOVO** — Pipeline de Dados: Integração, Qualidade e Automação: `disciplinas/01_pipeline_dados/00_original/canvas/00 - Aba Arquivos/Exercício 1 - Arquiteturas e fundamentos de pipelines de dados.docx` sha256 e9c7dbdead76293b…

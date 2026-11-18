@@ -831,6 +831,20 @@
    "sha256": "b8258a4f6f9945bd6d2bb05f8078ffb79572a0a16d15cfb916b497b4033220eb",
    "updated_at": "2026-11-11T22:25:30Z"
   },
+  "19130730": {
+   "baixado_em": "2026-11-18T19:15:17.701720-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/lab-airflow-Alunos.zip",
+   "nome": "lab-airflow-Alunos.zip",
+   "sha256": "c6b96ee247634a014be870aabd285cdb75bfc0c090359cf0856f820fc56039ac",
+   "updated_at": "2026-11-18T22:07:38Z"
+  },
+  "19130731": {
+   "baixado_em": "2026-11-18T19:15:17.701720-03:00",
+   "caminho": "disciplinas/06_orquestracao_workflows/00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/Modulo 02 - Orquestração de Workflow.pdf",
+   "nome": "Modulo 02 - Orquestração de Workflow.pdf",
+   "sha256": "9610da08e0786b70c4c69b5d862ddca164059fae79ec5819b8fee0bf9052dd01",
+   "updated_at": "2026-11-18T22:11:54Z"
+  },
   "279168:url:6842693": {
    "nome": "Maquina OVA do Curso",
    "url": "https://storage.googleapis.com/iec-containers-orquestration/iec-containers.zip"
