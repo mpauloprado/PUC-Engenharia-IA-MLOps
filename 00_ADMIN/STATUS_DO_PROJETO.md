@@ -17,6 +17,15 @@ Fase 2 — Ingestão, classificação e criação de mapa de conhecimento por di
 
 > Entradas mais recentes no topo. Veja `.claude/rules/multiplas-maquinas.md`.
 
+### 2026-11-18 (noite) — Kali (Claude Code, aba Code do app)
+- Retomada do contexto. Registro tardio de 16–17/11: Atividade 01 Airflow (`shopbrasil-airflow`) e trabalho Docker Compose (`guess_game`) publicados no GitHub e ligados como submódulos; falta postar os links no Canvas e testar o frontend do guess_game no navegador.
+- Aula 2 de Orquestração: `lab-airflow-Alunos.zip` (chegou pelo puc-sync em 18/11) extraído como cópia de trabalho em `06_orquestracao_workflows/04_labs/lab-airflow-Alunos/` (`logs/` fora do Git) e rodando no Kali: 6 containers, 8 DAGs, 0 erros de importação.
+- Passo a passo para estudo: `06_orquestracao_workflows/04_labs/PASSO_A_PASSO_LAB_AIRFLOW_ALUNOS.md`.
+- Decisão: `shopbrasil-airflow` **pausado** (`docker compose -p shopbrasil-airflow stop`) por conflito de portas 8080/5433. Religar com `start` após a aula (sem ele, a run diária das 06:00 não acontece).
+- Observação: no Drive foi extraído o zip **antigo** (`lab-airflow-11-01-2026`) dentro de `00_original/`; tirar de lá no Windows.
+- Pendente: inspeção formal (`/inspect-document`) de `Modulo 02 - Orquestração de Workflow.pdf` e do zip do lab; itens seguem `[ ]` em `NOVIDADES.md`.
+- Próximos passos: Teste de Fixação Docker (24/11); postar link da Atividade 01 (25/11); testar frontend e postar link do trabalho Docker (01/12).
+
 ### 2026-11-15 (noite) — Kali (Claude Code, terminal)
 - E-mail PUC (M365): leitura via Microsoft Graph **bloqueada** (exige aprovação do administrador). Pedido de aprovação enviado pelo aluno; aguardando. Encaminhamento para Gmail não testado.
 - Triagem forense do material de Kubernetes e Orquestração (32 arquivos): nenhum indício suspeito (`00_ADMIN/RELATORIOS_FORENSES/2026-11-15_lote_canvas_docker_orquestracao.md`). 39 itens marcados `[x]` em `NOVIDADES.md`.
