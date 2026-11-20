@@ -846,39 +846,39 @@
    "updated_at": "2026-11-18T22:11:54Z"
   },
   "19131468": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Introdução aos containers-1 (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Introdução aos containers-1.pptx",
    "sha256": "027a890a95a565f58a936f9b0f79b8061486d40baa2e004a89187fe72bdc22d8",
-   "updated_at": "2026-11-19T12:40:35Z"
+   "updated_at": "2026-11-20T18:27:13Z"
   },
   "19131469": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Conteiner Internals (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Conteiner Internals.pptx",
    "sha256": "e0d2b358ec51ae52311aecd2bc2102478909d5b19a265189a577c90b4e74c645",
-   "updated_at": "2026-11-19T12:40:41Z"
+   "updated_at": "2026-11-20T18:27:18Z"
   },
   "19131470": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Volumes And Network-1 (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Docker Volumes And Network-1.pptx",
    "sha256": "baedc5796de914e00f7fa6a869b13a30cee1d63ec7ca8fd60f139ae123b77e58",
-   "updated_at": "2026-11-19T12:40:44Z"
+   "updated_at": "2026-11-20T18:27:19Z"
   },
   "19131471": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Segurança (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Segurança.pptx",
    "sha256": "73b76c5e7e62a409ebeec4864c05fe3e1b5e195b9330a7c56da7f30444b91a50",
-   "updated_at": "2026-11-19T12:40:49Z"
+   "updated_at": "2026-11-20T18:27:25Z"
   },
   "19131472": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Compose (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Docker Compose.pptx",
    "sha256": "92bc73958798e56d63c1d1fb09822eb5bae2669483ff8874f1f68b02547466a2",
-   "updated_at": "2026-11-19T12:40:50Z"
+   "updated_at": "2026-11-20T18:27:28Z"
   },
   "19131473": {
    "baixado_em": "2026-11-20T13:15:40.588001-03:00",
@@ -909,18 +909,18 @@
    "updated_at": "2026-11-18T23:00:07Z"
   },
   "19131583": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Origem Evolução (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Origem Evolução.pptx",
    "sha256": "65a13a4131e5f2901a18843bc7ed116287520e4eafdd31510204991a01969c45",
-   "updated_at": "2026-11-19T12:40:34Z"
+   "updated_at": "2026-11-20T18:27:11Z"
   },
   "19131584": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Logs (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Docker Logs.pptx",
    "sha256": "e1f7fe9afe893442bdcb02b554477f3bfa56850b1f29b890c285a44d821b76ec",
-   "updated_at": "2026-11-19T12:40:48Z"
+   "updated_at": "2026-11-20T18:27:24Z"
   },
   "19131585": {
    "baixado_em": "2026-11-20T13:15:40.588001-03:00",
@@ -944,18 +944,18 @@
    "updated_at": "2026-11-18T23:08:51Z"
   },
   "19131588": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/02 - Apresentação da disciplina/Apresentação da disciplina.pptx",
+   "ja_existia": true,
    "nome": "Apresentação da disciplina.pptx",
    "sha256": "09498cbcfbff8650e0471a8ff6bfe1e060947c278a82cff20db355a6a2f6d83d",
-   "updated_at": "2026-11-18T23:08:20Z"
+   "updated_at": "2026-11-20T18:27:04Z"
   },
   "19131589": {
-   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
    "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Instalando Docker (versao 2026-11-20_1315).pptx",
+   "ja_existia": true,
    "nome": "Instalando Docker.pptx",
    "sha256": "aeb81d3a7ef975f9445eccea89ec70654d6ad6f190eb705d807fc4cbe86838e2",
-   "updated_at": "2026-11-19T12:40:36Z"
+   "updated_at": "2026-11-20T18:27:15Z"
   },
   "279168:url:6842693": {
    "nome": "Maquina OVA do Curso",
