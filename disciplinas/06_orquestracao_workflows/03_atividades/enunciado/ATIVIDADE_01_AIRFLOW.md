@@ -51,6 +51,23 @@ Missão: pipeline no **Apache Airflow** que colete produtos da **FakeStore API**
 - `00_original/canvas/05 - UNIDADE 2 - TÍTULO DA UNIDADE/lab-airflow-11-01-2026.zip`
 - `00_original/lab_01-airflow/`
 
+## Revisão final (20/11/2026)
+
+- Enunciado original relido. Canvas: entrega por texto ou URL, 10 pts, prazo 25/11 23:59; sem orientação extra do professor nos avisos ou na Inbox `[CANVAS]`.
+- Projeto simplificado no estilo dos DAGs do lab do professor, mantendo todos os requisitos: sem tabela de alertas (o alerta simulado vai para o log), sem SLA, operador e callbacks mais curtos, README mais direto.
+- Reprodução: logs em volume nomeado (sem precisar de `.env`/`AIRFLOW_UID` no Linux) e sem publicar a porta 5433, que conflitava com o lab da disciplina.
+- Histórico do repositório: um commit único, sem a linha `Co-Authored-By` (branch local `entrega`; o histórico antigo está guardado na branch local `backup-antes-revisao`).
+- Testado num clone limpo, só com `docker compose up -d` e sem `.env` (Kali, Docker 28.5.2):
+  - init cria usuário, Connection e Pool `ecommerce_pool` (2 slots); 0 erros de importação;
+  - run agendada automática com sucesso: 4 categorias, 4 tasks mapeadas;
+  - `pytest`: 4 passed;
+  - Clear da mesma run: continua com 4 linhas no snapshot e 4 no histórico;
+  - API fora do ar: 5 tentativas, retries com espera crescente, `[ALERTA SIMULADO]` no fim, demais tasks em `upstream_failed`;
+  - run manual depois disso com sucesso: snapshot com 4 linhas; histórico com +4 linhas (append).
+- Ajuste depois do teste: no texto do retry, o número da tentativa foi corrigido (`try_number - 1`). Só checagem de sintaxe, sem nova execução.
+- Publicado em 20/11/2026 (force push, commit `fe73dee`). Clone anônimo pelo HTTPS idêntico ao local (mesma árvore `04042f33`).
+- Pendente: postar o link https://github.com/mpauloprado/shopbrasil-airflow na Atividade 01 do Canvas.
+
 ## Status da implementação (16/11/2026)
 
 - Código: https://github.com/mpauloprado/shopbrasil-airflow (público, publicado em 17/11/2026). No projeto: submódulo em `../entrega/shopbrasil-airflow/` (rodar no Kali; no Windows só leitura, pois a pasta fica no Google Drive).

@@ -31,6 +31,12 @@
 - [ ] Confirmar professores ainda não informados no SAL (10 disciplinas). A Grade v1.1 cita Renan Santos Mendes para Arquitetura e Governança de Soluções de IA e para MLOps e DataOps, e "A DEFINIR" para 8 disciplinas Online. Esses dados não constam no SAL.
 - [ ] Confirmar a sequência das disciplinas após dezembro de 2026. A Grade v1.1 cobre apenas 2026-2.
 
+## Prioridade 1: Integração do e-mail institucional (M365)
+- [ ] Obter da TI da PUC o consentimento de administrador para leitura do e-mail via Microsoft Graph
+  (somente leitura: `User.Read`, `Mail.Read` delegada, `offline_access`). Pedido automático feito em 15/11/2026; sem resposta até 20/11/2026.
+- Decisão (20/11/2026): não usar encaminhamento para outra conta Gmail. A API do Canvas **não** substitui o e-mail:
+  só enxerga mensagens geradas dentro do Canvas (Inbox, avisos), não as enviadas direto pelo Outlook (coordenação, secretaria, SGA, financeiro).
+
 ## Prioridade 2: Organização
 - [ ] Atualizar `PROGRESSO_GERAL.md` após cada aula ou atividade.
 - [ ] Criar notas somente após leitura das fontes originais.

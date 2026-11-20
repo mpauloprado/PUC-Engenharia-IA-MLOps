@@ -17,6 +17,13 @@ Fase 2 — Ingestão, classificação e criação de mapa de conhecimento por di
 
 > Entradas mais recentes no topo. Veja `.claude/rules/multiplas-maquinas.md`.
 
+### 2026-11-20 — Kali (Claude Code, aba Code do app)
+- Atividade 01 Airflow revisada contra o enunciado, simplificada (estilo dos DAGs do lab do professor) e republicada com commit único sem assinatura de IA (force push; backup local na branch `backup-antes-revisao` do submódulo). Testada em clone limpo: subida, run automática, pytest, idempotência e API fora do ar. Detalhes em `06_orquestracao_workflows/03_atividades/enunciado/ATIVIDADE_01_AIRFLOW.md`.
+- Encontrado no Canvas o enunciado do Projeto Final de Orquestração (`TRABALHO_FINAL_ORQUESTRACAO.pdf`, 50 pts, com pitch em vídeo); prazo ainda não publicado.
+- Ambiente: usuário `kali` adicionado ao grupo `docker` (vale após logout/login). Até lá, `sg docker -c "..."` roda Docker sem senha.
+- E-mail M365: a API do Canvas não cobre o e-mail institucional; pedido de consentimento do admin segue pendente (ver `PENDENCIAS.md`).
+- Próximos passos: postar o link da Atividade 01 no Canvas (até 25/11); Teste de Fixação Docker (24/11); testar frontend e postar link do trabalho Docker (01/12).
+
 ### 2026-11-18 (noite) — Kali (Claude Code, aba Code do app)
 - Retomada do contexto. Registro tardio de 16–17/11: Atividade 01 Airflow (`shopbrasil-airflow`) e trabalho Docker Compose (`guess_game`) publicados no GitHub e ligados como submódulos; falta postar os links no Canvas e testar o frontend do guess_game no navegador.
 - Aula 2 de Orquestração: `lab-airflow-Alunos.zip` (chegou pelo puc-sync em 18/11) extraído como cópia de trabalho em `06_orquestracao_workflows/04_labs/lab-airflow-Alunos/` (`logs/` fora do Git) e rodando no Kali: 6 containers, 8 DAGs, 0 erros de importação.
