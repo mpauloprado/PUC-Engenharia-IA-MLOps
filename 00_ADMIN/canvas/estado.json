@@ -845,6 +845,118 @@
    "sha256": "9610da08e0786b70c4c69b5d862ddca164059fae79ec5819b8fee0bf9052dd01",
    "updated_at": "2026-11-18T22:11:54Z"
   },
+  "19131468": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Introdução aos containers-1 (versao 2026-11-20_1315).pptx",
+   "nome": "Introdução aos containers-1.pptx",
+   "sha256": "027a890a95a565f58a936f9b0f79b8061486d40baa2e004a89187fe72bdc22d8",
+   "updated_at": "2026-11-19T12:40:35Z"
+  },
+  "19131469": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Conteiner Internals (versao 2026-11-20_1315).pptx",
+   "nome": "Conteiner Internals.pptx",
+   "sha256": "e0d2b358ec51ae52311aecd2bc2102478909d5b19a265189a577c90b4e74c645",
+   "updated_at": "2026-11-19T12:40:41Z"
+  },
+  "19131470": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Volumes And Network-1 (versao 2026-11-20_1315).pptx",
+   "nome": "Docker Volumes And Network-1.pptx",
+   "sha256": "baedc5796de914e00f7fa6a869b13a30cee1d63ec7ca8fd60f139ae123b77e58",
+   "updated_at": "2026-11-19T12:40:44Z"
+  },
+  "19131471": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Segurança (versao 2026-11-20_1315).pptx",
+   "nome": "Segurança.pptx",
+   "sha256": "73b76c5e7e62a409ebeec4864c05fe3e1b5e195b9330a7c56da7f30444b91a50",
+   "updated_at": "2026-11-19T12:40:49Z"
+  },
+  "19131472": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Compose (versao 2026-11-20_1315).pptx",
+   "nome": "Docker Compose.pptx",
+   "sha256": "92bc73958798e56d63c1d1fb09822eb5bae2669483ff8874f1f68b02547466a2",
+   "updated_at": "2026-11-19T12:40:50Z"
+  },
+  "19131473": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/AutoScale-1 (versao 2026-11-20_1315).pptx",
+   "nome": "AutoScale-1.pptx",
+   "sha256": "be24a1476fe8b705227e3d6139d255f4b5cd69e481d8fe6f47538996306e5e1f",
+   "updated_at": "2026-11-18T23:00:00Z"
+  },
+  "19131474": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Helm-2 (versao 2026-11-20_1315).pptx",
+   "nome": "Helm-2.pptx",
+   "sha256": "71dad28c7ebeb9cc725c29f1cd4cf209ce10d85f33fbe7ce968a2f1bbff39e66",
+   "updated_at": "2026-11-18T23:00:02Z"
+  },
+  "19131475": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/segurança-2 (versao 2026-11-20_1315).pptx",
+   "nome": "segurança-2.pptx",
+   "sha256": "4cada2fddb563551d25054bcdc7ba401575da7f91f1b26c1ec71207b8cea6699",
+   "updated_at": "2026-11-18T23:00:04Z"
+  },
+  "19131476": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Network E Storage-2 (versao 2026-11-20_1315).pptx",
+   "nome": "Network E Storage-2.pptx",
+   "sha256": "b92757e02ae147dbab302b8642ff99b9fc1ea655cd95091779e9e08ac9f39e78",
+   "updated_at": "2026-11-18T23:00:07Z"
+  },
+  "19131583": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Origem Evolução (versao 2026-11-20_1315).pptx",
+   "nome": "Origem Evolução.pptx",
+   "sha256": "65a13a4131e5f2901a18843bc7ed116287520e4eafdd31510204991a01969c45",
+   "updated_at": "2026-11-19T12:40:34Z"
+  },
+  "19131584": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Docker Logs (versao 2026-11-20_1315).pptx",
+   "nome": "Docker Logs.pptx",
+   "sha256": "e1f7fe9afe893442bdcb02b554477f3bfa56850b1f29b890c285a44d821b76ec",
+   "updated_at": "2026-11-19T12:40:48Z"
+  },
+  "19131585": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Arquitetura Kubernetes.pptx",
+   "nome": "Arquitetura Kubernetes.pptx",
+   "sha256": "c7a7f93355a3ea97ee222d1233b960d7acd8594a24c18955d850b348abd1ea34",
+   "updated_at": "2026-11-18T23:08:14Z"
+  },
+  "19131586": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Introdução ao Kubernetes.pptx",
+   "nome": "Introdução ao Kubernetes.pptx",
+   "sha256": "f683a771e25693ff0b22ee0b3ab43e6fadc3b601009ab0f2a11a44c34e4c99ae",
+   "updated_at": "2026-11-18T23:08:50Z"
+  },
+  "19131587": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/04 - Orquestração/Gerenciamento de aplicações.pptx",
+   "nome": "Gerenciamento de aplicações.pptx",
+   "sha256": "ce39c0d3b715e73548e09a22a8678fa90770edeceab43e5a5245ed8d5c60a163",
+   "updated_at": "2026-11-18T23:08:51Z"
+  },
+  "19131588": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/02 - Apresentação da disciplina/Apresentação da disciplina.pptx",
+   "nome": "Apresentação da disciplina.pptx",
+   "sha256": "09498cbcfbff8650e0471a8ff6bfe1e060947c278a82cff20db355a6a2f6d83d",
+   "updated_at": "2026-11-18T23:08:20Z"
+  },
+  "19131589": {
+   "baixado_em": "2026-11-20T13:15:40.588001-03:00",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Instalando Docker (versao 2026-11-20_1315).pptx",
+   "nome": "Instalando Docker.pptx",
+   "sha256": "aeb81d3a7ef975f9445eccea89ec70654d6ad6f190eb705d807fc4cbe86838e2",
+   "updated_at": "2026-11-19T12:40:36Z"
+  },
   "279168:url:6842693": {
    "nome": "Maquina OVA do Curso",
    "url": "https://storage.googleapis.com/iec-containers-orquestration/iec-containers.zip"
@@ -1042,8 +1154,8 @@
    "titulo": "Unidade 3 - Orientações de Estudo"
   },
   "279168:1-orientacoes-de-estudo": {
-   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Página - 1 - Orientações de Estudo.html",
-   "sha256": "9ba33a1725974f44a7e209bfb5867962127ab60474e824ae129212a13ad12bfd",
+   "caminho": "disciplinas/03_kubernetes/00_original/canvas/03 - Unidade 1 - Docker/Página - 1 - Orientações de Estudo (versao 2026-11-20_1315).html",
+   "sha256": "93a02765e01ad71031e38212483e2bd79628ab67469ac9a9d9d5aa89b127ea3c",
    "titulo": "1 - Orientações de Estudo"
   },
   "279168:referencias-bibliograficas-2": {
